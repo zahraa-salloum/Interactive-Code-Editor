@@ -2,6 +2,24 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
+use App\Http\Controllers\AuthController;
 
-Route::post('/signup', [UsersController::class, 'signup']);
+Route::group(['prefix' => 'v0.0.1'], function(){
+  Route::group(['prefix' => 'auth'], function () {
+      Route::post('login',[AuthController::class, 'login']);  
+      Route::post('logout',[AuthController::class, 'logout']);
+      Route::post('refresh',[AuthController::class, 'refresh']);
+  });
+
+  
+      Route::group(['middleware' => 'auth:api'], function(){
+
+
+      });
+
+      Route::post('register',[AuthController::class,'register']);
+
+});
+
+
+
