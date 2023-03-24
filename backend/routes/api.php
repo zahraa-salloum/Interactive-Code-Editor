@@ -2,6 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControllerUser;
+use App\Http\Controllers\UsersController;
 
-Route::post('/signup', [ControllerUser::class, 'signup']);
+Route::post('/signup', [UsersController::class, 'signup']);
