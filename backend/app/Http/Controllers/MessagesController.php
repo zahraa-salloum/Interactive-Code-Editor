@@ -10,20 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class MessagesController extends Controller
 {
     public function getAllMessages(Request $request){
-        // $validator = Validator::make($request->all(), [
-        //     'receiver_id' => 'required'
-        // ]);
-
-        // if ($validator->fails()) {
-        //     return response()->json([
-        //         'status' => 'failed',
-        //         'message' => $validator->errors()
-        //     ], 401);
-        // }
 
         $sender_id = Auth::id();
         $query = Message::where('sender_id',$sender_id)->get();
-        // dd($query);
         if($query) {
             return response()->json([
                 'status' => 'success',
