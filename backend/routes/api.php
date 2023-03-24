@@ -20,7 +20,7 @@ Route::group(['prefix' => 'v0.0.1'], function(){
         Route::get('/send_message', [MessagesController::class, "sendMessage"]);
         Route::post('/store_code', [CodesController::class, "storeCode"]);
         Route::get('/get_code/{user_id}', [CodesController::class, "getCodeById"]);
-        
+        Route::get('/get_all_messages', [MessagesController::class, "getAllMessages"]);
       });
 
       Route::post('register',[AuthController::class,'register']);
