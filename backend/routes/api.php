@@ -16,6 +16,7 @@ Route::group(['prefix' => 'v0.0.1'], function(){
       Route::group(['middleware' => 'auth:api'], function(){
         Route::get('/get_messages', [MessagesController::class, "getMessages"]);
         Route::get('/send_message', [MessagesController::class, "sendMessage"]);
+        Route::get('/get_all_messages'),[MessagesController::class,"getAllMessages"];
       });
 
       Route::post('register',[AuthController::class,'register']);
