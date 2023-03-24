@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class ControllerUser extends Controller
+class UsersController extends Controller
 {
     public function signup(Request $request){
         $validator = Validator::make($request-> all(),[
