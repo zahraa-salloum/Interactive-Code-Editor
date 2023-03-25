@@ -15,7 +15,7 @@ body{
 .top_pane{
   background-color: #D0E6F0;
 }
-.container{
+.container_code_editor{
   width: 80%;
   margin-top: 5%;
   margin-left: auto;
@@ -48,3 +48,4 @@ body{
 .editor_title{
   padding: 1%;
 }
+
