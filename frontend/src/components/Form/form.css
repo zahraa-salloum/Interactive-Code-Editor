@@ -1,0 +1,13 @@
+.form_container{
+    margin-top: 10%;
+    margin-left: 40%;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+   
+
+}
+h1{
+    text-align: center;
+    margin-bottom: 10%;
+}
