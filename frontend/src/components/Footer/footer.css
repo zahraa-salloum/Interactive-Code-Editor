@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist';
+}
+.footer-section{
+    background-color: #F88379;
+    width: 100%;
+    height: vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-section-links{
+    width: 70%;
+    height: 70%;
+}
+ul{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+li{
+    font-size: 20px;
+}
+.footer-action{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2%;
+}
+.footer-action p{
+    font-size: 20px;
+    margin-right: 2%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
