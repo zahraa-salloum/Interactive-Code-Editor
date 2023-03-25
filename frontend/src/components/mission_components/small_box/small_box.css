@@ -1,0 +1,22 @@
+.small-container{
+    width: 85%;
+    height: 42%;
+    border-radius: 10px;
+    background-color: #F88379;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: space-around;
+}
+.small-container .top{
+    height: 40%;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 600;
+}
+.small-container .bottom{
+    display: flex;
+    align-items: end;
+    height: 40%;
+    width: 90%;
+}

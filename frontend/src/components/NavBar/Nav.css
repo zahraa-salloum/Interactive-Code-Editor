@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist';
+}
+nav{
+    background-color: #F88379;
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-logo-container{
+    width: 150px;
+    height: 3rem;
+    margin-left: 2%;
+}
+.nav-logo-container h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+}
+.nav-links-container{
+    width: 40%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-links-container a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 48px;
+    text-decoration: none;
+}
+.nav-links-container a:hover{
+    text-decoration: underline;
+}

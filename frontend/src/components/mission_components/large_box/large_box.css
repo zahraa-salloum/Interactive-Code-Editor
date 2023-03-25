@@ -1,0 +1,26 @@
+.large-box{
+    height: 89%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #F88379;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.large-box .top{
+    height: 10%;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5%;
+}
+.large-box .bottom{
+    height: 20%;
+    width: 90%;
+    display: flex;
+    align-items: end;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
