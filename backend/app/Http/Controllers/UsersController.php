@@ -39,7 +39,7 @@ class UsersController extends Controller
         }
     
     function getUsers(Request $request){
-        $all = User::all();
+        $all = User::where('user_type_id',2)->get();
         return response()->json([
             'status' => 200,
             'users' => $all
