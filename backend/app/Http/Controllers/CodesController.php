@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\Code;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class CodesController extends Controller
@@ -32,26 +33,25 @@ class CodesController extends Controller
         } 
     }
 
-    public function getCodeById($user_id){
-        $validator = Validator::make(['user_id' => $user_id], [
-            'user_id' => 'required|exists:users,id',
-        ]);
-        if($validator -> fails()){
+
+    public function getCodeByAuth(){
+        $user = Auth::user();
+        if (!$user) {
             return response()->json([
                 'status' => 401,
-                'message' => $validator -> errors()
+                'message' => 'Unauthorized'
             ], 401);
         }
-        $code = Code::where('user_id', $user_id) -> first();
-        if(!$code){
+        $code = Code::where('user_id', $user->id)->first();
+        if (!$code) {
             return response()->json([
                 'status' => 404,
-                'message' => 'No code found under this user id'
+                'message' => 'No code found for this user'
             ], 404);
         }
-        return response()-> json([
-            'status'=> 200,
-            'message'=> $code->code
+        return response()->json([
+            'status' => 200,
+            'message' => $code->code
         ], 200);
     }
 }
