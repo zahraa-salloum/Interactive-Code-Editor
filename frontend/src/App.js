@@ -3,7 +3,6 @@ import HomePage from './Pages/HomePage';
 import CodeEditorPage from './Pages/CodeEditorPage';
 import RegisterPage from "./Pages/RegisterPage";
 
-
 function App() {
   return (
     <Routes>

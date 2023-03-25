@@ -4,7 +4,7 @@ import 'codemirror/theme/material.css'
 import 'codemirror/mode/python/python'
 import { Controlled as ControlledEditor } from 'react-codemirror2'
 import { on } from "codemirror";
-
+  
 
 function Editor(props) {
 
@@ -21,6 +21,7 @@ function Editor(props) {
 
 
     return (
+        <>
         <div className="editor_container">
             <div className="editor_title">
                 {displayName}
@@ -38,7 +39,10 @@ function Editor(props) {
             lineNumbers:true
         }}
         />
-        </div>  
+        </div>
+
+
+        </>
     )
 }
 
