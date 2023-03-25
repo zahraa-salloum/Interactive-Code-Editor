@@ -8,20 +8,20 @@ const[python, setPython] = useState('');
 return(
    
     <div className="container">
-        <div className="pane top-pane">
+        <div className="pane top_pane">
             <Editor 
             language = "python" 
             displayName="Input" 
             value={python} 
             onChange={setPython} />
         </div>
-        <div className="pane">
+        <div className="pane iframe_pane">
             <iframe
             title="output"
             sandbox="allow-scripts"
-            // frameBorder="0"
-            // width="50%"
-            // height="100%"
+            frameBorder="0"
+            width="100%"
+            height="100%"
             />
         </div>
     </div>
