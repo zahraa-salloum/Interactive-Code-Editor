@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Detail;
 use Illuminate\Support\Facades\Storage;
+use Auth;
 
 
 use Illuminate\Http\Request;
@@ -41,7 +42,17 @@ class UsersController extends Controller
         $all = User::all();
         return response()->json([
             'status' => 200,
-            'data' => $all
-        ]);}
+            'users' => $all
+        ]);
+       }
+    
+    function getUser(Request $request){
+        $id = Auth::user()->id;
+        $user= User::find($id);
+        return response()->json([
+            'status' => 200,
+            'user' => $user
+        ]);
+    }
 }
 
