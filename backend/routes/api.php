@@ -24,7 +24,10 @@ Route::group(['prefix' => 'v0.0.1'], function(){
       Route::post('register',[AuthController::class,'register']);
         Route::post('/store_code', [CodesController::class, "storeCode"]);
         Route::get('/get_code/{user_id}', [CodesController::class, "getCodeById"]);
+
         Route::post('add_details',[UsersController::class, 'addUserDetails']); 
+        Route::post('add_details',[UsersController::class, 'addUserDetails']);
+        Route::get('/get_all_users',[UsersController::class,'getUsers']);
       });
 
 
