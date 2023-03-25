@@ -14,7 +14,7 @@ const CodeEditorPage = () => {
 
   return (
     <div className="container">
-<<<<<<< HEAD
+
       <div className="pane top-pane">
         <Editor
           language="python"
@@ -44,7 +44,7 @@ const CodeEditorPage = () => {
             height="100%"
             />
         </div>
->>>>>>> 4961dd17cda98f50452b16035cd57e5d5b9b8738
+
     </div>
   );
 };
