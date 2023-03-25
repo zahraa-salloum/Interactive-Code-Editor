@@ -10,7 +10,7 @@ const NavBar = () => {
                 <a href="">Home</a>
                 <a href="">Our Mission</a>
                 <a href="">Why Us</a>
-                <a href="">Testimonials</a>
+                <a href="">Take A Look</a>
             </div>
             <Button name={'Sign Up'}/>
         </nav>
