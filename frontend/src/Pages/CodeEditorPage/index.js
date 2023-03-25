@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Editor from "../../components/Editor";
+import Editor from "../../components/Editor/Editor.js";
 
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
