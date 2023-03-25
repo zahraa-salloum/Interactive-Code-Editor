@@ -8,7 +8,7 @@ const[python, setPython] = useState('');
 return(
    
     <div className="container">
-<<<<<<< HEAD
+
       <div className="pane top-pane">
         <Editor
           language="python"
@@ -18,10 +18,10 @@ return(
         />
       </div>
       <div className="pane">
-        <div className="output_container top_pane">{output}</div>
+        <div className="output_container top_pane">{}</div>
       </div>
-      <button onClick={pythonCompile}>click me to compile</button>
-=======
+      <button >click me to compile</button>
+
         <div className="pane top_pane">
             <Editor 
             language = "python" 
@@ -38,7 +38,7 @@ return(
             height="100%"
             />
         </div>
->>>>>>> 4961dd17cda98f50452b16035cd57e5d5b9b8738
+
     </div>
 )
 }
