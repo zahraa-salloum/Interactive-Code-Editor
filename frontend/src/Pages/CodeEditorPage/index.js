@@ -4,6 +4,11 @@ import Editor from "../../components/Editor";
 const CodeEditorPage = () => {
 
 const[python, setPython] = useState('');
+const srcDoc = `<html>
+<py-script>
+${python}
+</py-script>
+</html>`
 
 return(
    
@@ -17,6 +22,7 @@ return(
         </div>
         <div className="pane iframe_pane">
             <iframe
+            srcDoc={srcDoc}
             title="output"
             sandbox="allow-scripts"
             frameBorder="0"
