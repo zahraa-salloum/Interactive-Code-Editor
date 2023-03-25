@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Editor from "../../components/Editor";
+import Editor from "../../components/Editor/Editor.js";
+// import Editor from "../components/Editor/Output.js";
 
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
@@ -14,7 +15,7 @@ const CodeEditorPage = () => {
 
   return (
     <div className="container_code_editor">
-      <div className="pane top-pane">
+      <div className="pane top_pane">
         <Editor
           language="python"
           displayName="Input"
@@ -22,7 +23,7 @@ const CodeEditorPage = () => {
           onChange={setPython}
         />
       </div>
-      <div className="pane">
+      <div className="pane top_pane">
         <div className="output_container top_pane">{output}</div>
       </div>
       <button onClick={pythonCompile}>click me to compile</button>
