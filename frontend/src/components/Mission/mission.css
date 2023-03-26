@@ -16,6 +16,7 @@
 }
 .mission-header h1{
     width: 20%;
+    margin-top: 10%;
     font-size: 40px;
 }
 .mission-header p{
@@ -25,6 +26,7 @@
     opacity: .7;
 }
 .boxes-container{
+    margin-bottom: auto;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -52,3 +54,67 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 480px) {
+    .mission-container{
+        width: 100%;
+        height: 205vh;
+    }
+    .mission-header{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mission-header h1{
+        width: 80%;
+        font-size: 40px;
+        text-align: center;
+    }
+    .mission-header p{
+        text-align: center;
+        width: 80%;
+        font-size: 17px;
+        font-weight: 600;
+        opacity: .7;
+    }
+    .boxes-container{
+        height: 150vh;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-container{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-container{
+        width: 50%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+        margin-bottom: 10%;
+    }
+    .double-container{
+        height: 100%;
+        width: 100vw;
+        justify-content: center;
+    }
+    .large-container{
+        width: 180%;
+        height: 100rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+  }
