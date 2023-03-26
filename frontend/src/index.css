@@ -1,6 +1,14 @@
+:root {
+  --charcoal: #4C5D70;
+  --white: #ffffff;
+  --serenity: #D0E6F0;
+  --black: #000000;
+  --coral: #F88379;
+}
+
 body{
   margin:0;
-  background-color: #4C5D70;
+  background-color:var(--charcoal);
 }
 /* .container {
   display: flex;
@@ -8,18 +16,18 @@ body{
   gap: 10px;
 } */
 .cm-s-material.CodeMirror {
-  background-color: #4C5D70 !important;
+  background-color: var(--charcoal) !important;
   border-bottom-left-radius: 10px ;
   border-bottom-right-radius: 10px ;
 }
 .top_pane{
-  background-color: #D0E6F0;
+  background-color: var(--serenity);
 }
 
 
 .container_code_editor{
   width: 80%;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -29,26 +37,48 @@ body{
 .pane{
   flex-grow: 1;
   flex-basis: 0;
-  border:2px solid #D0E6F0;
+  border:2px solid var(--serenity);
   border-radius: 10px;
 }
 .iframe_pane{
   flex-grow: 1;
-  background-color: #D0E6F0;
+  background-color: var(--serenity);
   border:none;
 }
 
 .cm-s-material .CodeMirror-gutters {
   /*background: #F88379 !important ;*/
-  color: white;
+  color: var(--white);
   border: none;
   border-bottom-left-radius: 10px !important;
 }
 .cm-s-material .CodeMirror-guttermarker, .cm-s-material .CodeMirror-guttermarker-subtle, .cm-s-material .CodeMirror-linenumber {
-  color: white !important;
+  color: var(--white) !important;
 }
 .editor_title{
   padding: 1%;
+  color:var(--serenity);
 }
 
+.output_title {
+  padding: 1%;
+  color:var(--serenity);
+  background-color: var(--charcoal);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
+.code_editor_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.compile_btn {
+  border: 1px solid var(--coral);
+  margin-top: 5%;
+}
+
+.output_value {
+  padding: 1%;
+}
