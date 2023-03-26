@@ -1,10 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Urbanist';
-}
 nav{
-    background-color: #F88379;
+    background-color: var(--coral);
     width: 100%;
     min-height: 90px;
     display: flex;

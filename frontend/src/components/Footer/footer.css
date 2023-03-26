@@ -1,10 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Urbanist';
-}
 .footer-section{
-    background-color: #F88379;
+    background-color: var(--coral);
     width: 100%;
     height: 20vh;
     display: flex;
@@ -37,16 +32,16 @@ li{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 a:hover{
     text-decoration: underline;
-    color: white;
+    color: var(--white);
 }
 
 @media screen and (max-width: 480px) {
     .footer-section{
-        background-color: #F88379;
+        background-color: var(--coral);
         width: 100%;
         height: 30vh;
         display: flex;

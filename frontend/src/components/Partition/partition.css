@@ -3,5 +3,5 @@
     flex-direction: column;
 }
 h1{
-    color: white;
+    color: var(--white);
 }

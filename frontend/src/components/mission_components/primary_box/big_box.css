@@ -19,12 +19,12 @@
 }
 .text-container h3{
     font-size: 30px;
-    color: #F88379;
+    color: var(--coral);
     font-weight: 500;
 }
 .text-container h1{
     font-size: 50px;
-    color: white;
+    color: var(--white);
     margin-top: 5%;
 }
 .container-btn{

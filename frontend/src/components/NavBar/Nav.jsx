@@ -1,4 +1,5 @@
 import './Nav.css';
+import logo from '../../assets/logo.svg'
 import Button from '../Button/button';
 import { useState } from 'react';
 const NavBar = () => {
@@ -20,7 +21,7 @@ const NavBar = () => {
     return (
         <nav>
             <div className="nav-logo-container">
-                <h1>LOGO</h1>
+                <a href="/"><img className = "logo" src={logo} alt="Logo" /></a>
             </div>
             <div className="nav-links-container">
                 <a href="">Home</a>
