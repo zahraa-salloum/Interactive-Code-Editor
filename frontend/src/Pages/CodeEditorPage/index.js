@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Editor from "../../components/Editor/Editor.js";
 import Output from "../../components/Editor/Output.js";
 import axios from "axios";
@@ -37,7 +37,7 @@ const CodeEditorPage = () => {
 
   return (
     <div className="container_code_editor">
-      <div className="pane top_pane">
+      <div className="pane top-pane">
         <Editor
           language="python"
           displayName="Input"
