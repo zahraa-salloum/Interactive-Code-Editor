@@ -3,118 +3,131 @@
     padding: 0;
     font-family: 'Urbanist';
 }
+
 .mission-container{
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
+
 .mission-header{
     width: 100%;
-    height: 15%;
+    height: 20vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .mission-header h1{
     width: 20%;
     margin-top: 10%;
     font-size: 40px;
 }
+
 .mission-header p{
     width: 25%;
     font-size: 17px;
     font-weight: 600;
     opacity: .7;
 }
+
 .boxes-container{
     margin-bottom: auto;
     height: 80vh;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
+
 .left-container{
-    width: 40%;
+    flex-basis: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
+
 .right-container{
-    width: 50%;
+    flex-basis: 50%;
     display: flex;
+    max-width: 100%;
 }
+
 .double-container{
-    width: 50%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    max-width: 100%;
 }
+
 .large-container{
-    width: 50%;
+    flex-basis: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 @media screen and (max-width: 480px) {
     .mission-container{
         width: 100%;
-        height: 205vh;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
     }
+
     .mission-header{
-        width: 100%;
-        height: 30%;
-        display: flex;
+        height: auto;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
+
     .mission-header h1{
         width: 80%;
-        font-size: 40px;
+        margin-top: 0;
+        font-size: 28px;
         text-align: center;
     }
+
     .mission-header p{
-        text-align: center;
         width: 80%;
-        font-size: 17px;
+        margin-top: 10px;
+        font-size: 14px;
         font-weight: 600;
         opacity: .7;
+        text-align: center;
     }
+
     .boxes-container{
-        height: 150vh;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
     }
-    .left-container{
-        width: 90%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    .left-container {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
-    .right-container{
-        width: 50%;
-        height: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center ;
-        margin-bottom: 10%;
+
+    .right-container {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
-    .double-container{
-        height: 100%;
-        width: 100vw;
-        justify-content: center;
+
+    .double-container {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
-    .large-container{
-        width: 180%;
-        height: 100rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    .large-container {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
-    
-  }
+}

@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Validator;
 
 class CodesController extends Controller
 {
-    public function storeCode(Request $request){
+    public function storeCode(Request $request)
+    {
         $validator = Validator::make($request->all(),[
-            'user_id'=>'required|exists:users,id',
             'code'=>'required|string|max:4294967295',
         ]);
         if ($validator->fails()) {
@@ -20,7 +20,11 @@ class CodesController extends Controller
             ], 401);
         }
         try {
-            $code = Code::create($validator->validated());
+            $user_id = auth()->user()->id;
+            $code = Code::create([
+                'user_id' => $user_id,
+                'code' => $request->input('code')
+            ]);
             return response()->json([
                 'status' => 200,
                 'message' => 'Code added successfully'

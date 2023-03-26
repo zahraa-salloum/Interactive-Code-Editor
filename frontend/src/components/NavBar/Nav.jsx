@@ -1,22 +1,6 @@
 import './Nav.css';
 import Button from '../Button/button';
-import { useState } from 'react';
 const NavBar = () => {
-    const [openMenu, setOpenMenu] = useState(false);
-    const menuOptions = [
-        {
-            text: 'Home'
-        },
-        {
-            text: 'Our Mission'
-        },
-        {
-            text: 'Why Us'
-        },
-        {
-            text: 'Take A Look'
-        }
-    ]
     return (
         <nav>
             <div className="nav-logo-container">
