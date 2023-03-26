@@ -17,3 +17,12 @@
     width: 50%;
     font-size: 80px;
 }
+@media screen and (max-width: 480px) {
+    .main-header-home{
+        height: 70vh;
+    }
+    .main-header-title{
+        width: 80%;
+        font-size: 40px;
+    }
+  }

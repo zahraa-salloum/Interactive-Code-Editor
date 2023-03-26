@@ -42,7 +42,7 @@ const CodeEditorPage = () => {
       <NavBar />
     <div className="code_editor_page">
       
-      <button className ="compile_btn" onClick={pythonCompile}>Run</button>
+      <button className ="compile_btn btn" onClick={pythonCompile}>Run</button>
     <div className="container_code_editor">
       <div className="pane top-pane">
         <Editor
