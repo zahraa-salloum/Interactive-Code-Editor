@@ -75,23 +75,39 @@ export default CodeEditorPage;
 
 // const CodeEditorPage = () => {
 //   const [python, setPython] = useState("");
-//   const [code_output, setOutput] = useState("");
-
-//   const handleCodeChange = async() =>{
-//     pythonCompile().then(response => console.log(response));
-//   }
-
+//   const [code_output, setOutput] = useState("Waiting for your code ...");
 
 //   const pythonCompile = async () => {
 //     const python_code = python;
-//     const pyodide = await window.loadPyodide();
-//     const output = await pyodide.runPythonAsync(python_code);
-//     setOutput(output);
 
+//     const encodedParams = new URLSearchParams();
+//     encodedParams.append("LanguageChoice", "5");
+//     encodedParams.append("Program", python_code);
+
+//     const options = {
+//       method: "POST",
+//       url: "https://code-compiler.p.rapidapi.com/v2",
+//       headers: {
+//         "content-type": "application/x-www-form-urlencoded",
+//         "X-RapidAPI-Key": "68d519edb5mshba2573f86109024p1f84e8jsn394c08753888",
+//         "X-RapidAPI-Host": "code-compiler.p.rapidapi.com",
+//       },
+//       data: encodedParams,
+//     };
+
+//     // axios
+//     //   .request(options)
+//     //   .then(function (response) {
+//     //     setOutput(response.data.Result);
+//     //   })
+//     //   .catch(function (error) {
+//     //     console.error(error);
+//     //   });
 //   };
+
 //   return (
 //     <div className="container_code_editor">
-//       <div className="pane top_pane">
+//       <div className="pane top-pane">
 //         <Editor
 //           language="python"
 //           displayName="Input"
@@ -100,11 +116,11 @@ export default CodeEditorPage;
 //         />
 //       </div>
 //       <div className="pane top_pane">
-//       <Output value = {code_output} />
+//         <Output value={code_output} />
 //       </div>
-//       <button onClick={handleCodeChange}>click me to compile</button>
+//       <button onClick={pythonCompile}>click me to compile</button>
 //     </div>
 //   );
 // };
-// export default CodeEditorPage;
 
+// export default CodeEditorPage;
