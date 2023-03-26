@@ -3,6 +3,7 @@ import HomePage from './Pages/HomePage';
 import CodeEditorPage from './Pages/CodeEditorPage';
 import RegisterPage from "./Pages/RegisterPage";
 import AdminPage from "./Pages/AdminPage";
+import CodesPage from "./Pages/CodesPage";
 
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
 
       <Route path="/" element={<HomePage />} />
       <Route path="/code_editor" element={<CodeEditorPage />} />
-      <Route path="*" element={<div>404</div>} />
+      <Route path="/codes" element={<CodesPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/admin" element={<AdminPage/>}/>
+      <Route path="*" element={<div>404</div>} />
 
     </Routes> 
   );
