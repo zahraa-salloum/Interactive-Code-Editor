@@ -1,0 +1,48 @@
+@import 'index.css';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.user-container{
+display:flex;
+   background-color: var(--serenity);
+   width:75vw;
+   justify-content:space-between;
+   padding: 2%;
+}
+
+.border:not(:last-child){
+    border-bottom :solid 1px var(--charcoal)
+}
+
+.table-container{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.admin-content{
+    padding:3%;
+}
+
+.list{
+    color:var(--serenity)
+}
+
+.btn-user{
+    background-color: var(--coral) !important;
+    color:var(--white)
+}
+/* .btn-user:hover{
+    background-color: var(--white) !important;
+    color:var(--coral)
+} */
+
+.user{
+    align-self: center;
+    width:30%
+}
