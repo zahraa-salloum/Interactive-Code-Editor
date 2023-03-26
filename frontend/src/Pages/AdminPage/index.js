@@ -9,7 +9,7 @@ const AdminPage = () => {
     const [users, setUsers] = useState([]);
 
     // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODM2OTQyLCJleHAiOjE2Nzk4NDA1NDIsIm5iZiI6MTY3OTgzNjk0MiwianRpIjoiU3duSWxVbmk1V1FaWnMySyIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.y3So6qBu1QyADReC4yhktJDBX-IprgNYl9hvQMd89ME"
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODQ2OTM3LCJleHAiOjE2Nzk4NTA1MzcsIm5iZiI6MTY3OTg0NjkzNywianRpIjoiOERPNTBzVzhydTZUUFRrdCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.s5710c2PxnAh7iVyIIrH2OkK4xT-ETHL48riO_n8OAo"
 
     useEffect(() => {
         const getUsers = () => {
