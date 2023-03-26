@@ -5,6 +5,7 @@ import RegisterPage from "./Pages/RegisterPage";
 import AdminPage from "./Pages/AdminPage";
 import CodesPage from "./Pages/CodesPage";
 import DisplayUsers from "./Pages/DisplayUsersPage";
+import ChatsPage from "./Pages/ChatsPage/index"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/admin" element={<AdminPage/>}/>
       <Route path="/users" element={<DisplayUsers/>}/>
+      <Route path="/chat" element={<ChatsPage/>}/>
       <Route path="*" element={<div>404</div>} />
 
     </Routes> 

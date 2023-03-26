@@ -1,0 +1,21 @@
+@import '../../index.css';
+
+.chat_page{
+    padding:0% 2%;
+    display:flex;
+}
+
+.chat_list_content{
+    display:flex;
+    flex-direction: column;
+    border-right: 1px solid var(--white);
+    height:85vh;
+    padding-right: 2%;
+}
+
+.chat_list_header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:var(--white)
+}
+
