@@ -30,7 +30,13 @@ const CodeEditorPage = () => {
     axios
       .request(options)
       .then(function (response) {
-        setOutput(response.data.Result);
+        console.log(response.data)
+        const splitted_code = (response.data.Result).split("\n")
+        let html = "";
+        for(let i; i<splitted_code.length;i++){
+        html = <><p>{splitted_code[i]}</p></>
+        console.log(splitted_code[i])}
+        setOutput(html);
       })
       .catch(function (error) {
         console.error(error);
@@ -56,7 +62,9 @@ const CodeEditorPage = () => {
         displayName="Output"
         value={code_output} />
       </div>
+      
     </div>
+    <button className = "btn compile_btn" onClick={pythonCompile}>Save</button>
     </div>
     <Footer />
     
