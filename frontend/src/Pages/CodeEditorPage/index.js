@@ -33,9 +33,9 @@ const CodeEditorPage = () => {
         console.log(response.data)
         const splitted_code = (response.data.Result).split("\n")
         let html = "";
-        for(let i; i<splitted_code.length;i++){
-        html = <><p>{splitted_code[i]}</p></>
-        console.log(splitted_code[i])}
+        {html =splitted_code.map((code,index) => (
+         <p key={index}>{code}</p>
+      ))}
         setOutput(html);
       })
       .catch(function (error) {
