@@ -20,9 +20,9 @@ class CodesController extends Controller
             ], 401);
         }
         try {
-            $user_id = auth()->user()->id;
+            $user = Auth::user();
             $code = Code::create([
-                'user_id' => $user_id,
+                'user_id' => $user->id,
                 'code' => $request->input('code')
             ]);
             return response()->json([
