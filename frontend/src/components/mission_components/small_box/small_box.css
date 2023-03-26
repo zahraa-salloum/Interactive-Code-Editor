@@ -20,3 +20,24 @@
     height: 40%;
     width: 90%;
 }
+
+@media screen and (max-width: 480px) {
+    .small-container{
+        width: 90%;
+        height: 12rem;
+        margin-top: 2%;
+    }
+    .small-container .top{
+        height: 40%;
+        width: 90%;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .small-container .bottom{
+        display: flex;
+        align-items: end;
+        height: 40%;
+        width: 90%;
+        font-size: 10px;
+    }
+  }
