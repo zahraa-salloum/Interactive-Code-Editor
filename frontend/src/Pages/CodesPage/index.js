@@ -13,7 +13,7 @@ const CodesPage = () => {
     
 
     // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODU3MTI0LCJleHAiOjE2Nzk4NjA3MjQsIm5iZiI6MTY3OTg1NzEyNCwianRpIjoiVFhRbDYwREh2THRWZVNRSCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XDOq9v_rpkepazg1z2ZGUcKnIl7KvTPrLH2ld3SBdGI"
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODYwOTc3LCJleHAiOjE2Nzk4NjQ1NzcsIm5iZiI6MTY3OTg2MDk3NywianRpIjoiMk05VmVFaXZ3dUtOd0xLaCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DFYyvmtuOc4jeohckOkYYF-P_4ITcxQBgzeqf6uoPxM"
 
     useEffect(() => {
         const getCodes = () => {
@@ -29,8 +29,8 @@ const CodesPage = () => {
         getCodes()
     },[]) 
 
-    const download = () => {
-        
+    const download = (code) => {
+        console.log(code)
     }
 
 return(
@@ -44,7 +44,7 @@ return(
                     <CodePreview 
                     code_title={"Code #"+(i++)+"  Date: "+message['created_at']}
                     code_content={message['code']}
-                    onclick={download}
+                    onclick={() => download(message['code'])}
                 />
                 </React.Fragment>
 
