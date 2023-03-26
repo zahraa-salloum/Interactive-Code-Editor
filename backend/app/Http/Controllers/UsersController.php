@@ -38,7 +38,7 @@ class UsersController extends Controller
         }
     
     function getUsers(Request $request){
-        $all = User::where('user_type_id',2)->get();
+        $all = User::leftjoin('details','details.user_id','=','users.id')->where('user_type_id',2)->get();
         return response()->json([
             'status' => 200,
             'users' => $all
