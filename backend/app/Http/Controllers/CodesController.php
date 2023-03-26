@@ -32,8 +32,7 @@ class CodesController extends Controller
             ], 500);
         } 
     }
-
-
+    
     public function getCodeByAuth(){
         $user = Auth::user();
         if (!$user) {
