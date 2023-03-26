@@ -8,8 +8,6 @@ const Search = () => {
         e.preventDefault();
         console.log(user);
     }
-
-
     return(
         <div>
             <div className="search-header">
