@@ -1,5 +1,5 @@
 import './Nav.css';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/Logo.svg'
 import Button from '../Button/button';
 const NavBar = () => {
     return (

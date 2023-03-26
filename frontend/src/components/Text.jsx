@@ -1,10 +1,12 @@
-import './WhyUs/whyUs.css';
+import './WhyUs/why_benefit.css';
 const Text = ({title, content}) => {
     return (
-        <div className='right-side'>
-            <div className='text-container'>
+        <div className='text-wrapper'>
+            <div className='title'>
                 <h1>{title}</h1>
-                <p>{content}</p>    
+            </div>
+            <div className='text'>
+                <p>{content}</p>
             </div>
         </div>
     );
