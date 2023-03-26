@@ -54,5 +54,4 @@ class CodesController extends Controller
             'message' => $codes
         ], 200);
     }
-    
 }

@@ -1,0 +1,64 @@
+.search-header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-header-text{
+    height: 50%;
+}
+form{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+input{
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid black;
+    color: white;
+    font-size: 15px;
+}
+button{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.fetch-users{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.user_card{
+    background-color: #D0E6F0;
+    width: 20%;
+    height: 55%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+}
+.user_card h1{
+    color: black;
+    margin-bottom: 0;
+}
+.user_card p{
+    width: 15rem;
+    height: 5rem;
+}
+.user-profile-img{
+    border: 1px solid black;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-top: 0;
+}
