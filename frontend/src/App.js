@@ -10,7 +10,7 @@ function App() {
     <Routes>
 
       <Route path="/" element={<HomePage />} />
-      <Route path="/code_editor" element={<CodeEditorPage />} />
+      <Route path="/code_editor" element={<CodeEditorPage/>} />
       <Route path="*" element={<div>404</div>} />
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/admin" element={<AdminPage/>}/>
