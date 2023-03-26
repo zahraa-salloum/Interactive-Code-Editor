@@ -1,26 +1,11 @@
 import './Nav.css';
+import logo from '../../assets/logo.svg'
 import Button from '../Button/button';
-import { useState } from 'react';
 const NavBar = () => {
-    const [openMenu, setOpenMenu] = useState(false);
-    const menuOptions = [
-        {
-            text: 'Home'
-        },
-        {
-            text: 'Our Mission'
-        },
-        {
-            text: 'Why Us'
-        },
-        {
-            text: 'Take A Look'
-        }
-    ]
     return (
         <nav>
             <div className="nav-logo-container">
-                <h1>LOGO</h1>
+                <a href="/"><img className = "logo" src={logo} alt="Logo" /></a>
             </div>
             <div className="nav-links-container">
                 <a href="">Home</a>

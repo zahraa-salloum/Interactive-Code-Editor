@@ -49,10 +49,6 @@ display:flex;
     background-color: var(--coral) !important;
     color:var(--white)
 }
-/* .btn-user:hover{
-    background-color: var(--white) !important;
-    color:var(--coral)
-} */
 
 .user{
     align-self: center;

@@ -17,8 +17,8 @@ form{
 input{
     width: 20rem;
     height: 2rem;
-    border: 1px solid black;
-    color: white;
+    border: 1px solid var(--black);
+    color: var(--white);
     font-size: 15px;
 }
 button{
@@ -37,7 +37,7 @@ button{
     
 }
 .user_card{
-    background-color: #D0E6F0;
+    background-color: var(--white);
     width: 20%;
     height: 55%;
     border-radius: 10px;
@@ -48,7 +48,7 @@ button{
     margin-top: 2%;
 }
 .user_card h1{
-    color: black;
+    color: var(--black);
     margin-bottom: 0;
 }
 .user_card p{
@@ -56,7 +56,7 @@ button{
     height: 5rem;
 }
 .user-profile-img{
-    border: 1px solid black;
+    border: 1px solid var(--black);
     width: 10rem;
     height: 10rem;
     border-radius: 50%;

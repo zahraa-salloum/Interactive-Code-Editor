@@ -6,9 +6,16 @@
   --coral: #F88379;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Urbanist';
+}
+
 body{
   margin:0;
   background-color:var(--charcoal);
+  
 }
 /* .container {
   display: flex;
@@ -85,3 +92,6 @@ button.compile_btn {
   padding: 1%;
 }
 
+img.logo {
+  max-width: 70px;
+}

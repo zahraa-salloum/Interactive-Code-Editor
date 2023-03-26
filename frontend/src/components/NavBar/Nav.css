@@ -1,10 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Urbanist';
-}
 nav{
-    background-color: #F88379;
+    background-color: var(--coral);
     width: 100%;
     min-height: 90px;
     display: flex;
@@ -23,16 +18,17 @@ nav{
     line-height: 48px;
 }
 .nav-links-container{
-    width: 40%;
-    height: 3rem;
+    width: 50%;
+    height: 5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     justify-content: space-around;
 }
 .nav-links-container a{
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 100%;
     line-height: 48px;
     text-decoration: none;
 }

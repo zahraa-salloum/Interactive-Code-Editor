@@ -7,9 +7,9 @@
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #F88379;
-    color: white;
+    background-color: var(--coral);
+    color: var(--white);
 }
 .btn_download:hover{
-    background-color: #F88379;;
+    background-color: var(--coral);;
 }

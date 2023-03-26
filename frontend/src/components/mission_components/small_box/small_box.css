@@ -2,7 +2,7 @@
     width: 85%;
     height: 42%;
     border-radius: 10px;
-    background-color: #F88379;
+    background-color: var(--coral);
     display: flex;
     flex-direction: column;
     align-items:center ;

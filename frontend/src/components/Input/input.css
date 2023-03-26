@@ -1,11 +1,11 @@
 input{
     margin-top: 2%;
     padding: 10px;
-    border: 1px solid  #F88379;
+    border: 1px solid  var(--coral);
     border-radius: 10px;
-    background-color: #4C5D70;
-    color: white;
+    background-color: var(--charcoal);
+    color: var(--white);
 }
 input::placeholder{
-    color: white;
+    color: var(--white);
 }
