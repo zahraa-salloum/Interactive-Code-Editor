@@ -8,6 +8,7 @@ import CodePreview from '../../components/CodePreview';
 const CodesPage = () => {
 
     const [messages, setMessages] = useState([]);
+    let i = 1;
     
 
     // const token = window.localStorage.getItem('token');
@@ -34,8 +35,9 @@ return(
         {messages.map(message => (
             
             <CodePreview 
-        code_title={message['created_at']}
+        code_title={"Code #"+(i++)+"  Date: "+message['created_at']}
         code_content={message['code']}/>
+        
 
            ))}
         
