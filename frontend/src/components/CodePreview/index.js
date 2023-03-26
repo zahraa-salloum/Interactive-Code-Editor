@@ -1,4 +1,4 @@
-import RegisterButton from "../RegisterButton/registerbutton";
+import DownloadButton from "../DownloadButton";
 import "./style.css";
 
 
@@ -9,7 +9,7 @@ return(
     <div className="container_code_download">
     <div className="container_code_title">{code_title}</div>
     <div className="container_code_content">{code_content}</div>
-    <RegisterButton name={"Download File"}/>
+    <DownloadButton name={"Download File"}/>
     </div>
 
 )

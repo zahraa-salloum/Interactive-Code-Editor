@@ -1,0 +1,15 @@
+.btn_download{
+    margin-top: 15%;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #F88379;
+    color: white;
+}
+.btn_download:hover{
+    background-color: #F88379;;
+}
