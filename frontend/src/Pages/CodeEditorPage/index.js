@@ -5,6 +5,7 @@ const CodeEditorPage = () => {
   const [python, setPython] = useState("");
   const [output, setOutput] = useState("");
 
+
   const pythonCompile = async (e) => {
     const python_code = python;
     const pyodide = await window.loadPyodide();
@@ -29,5 +30,5 @@ const CodeEditorPage = () => {
     </div>
   );
 };
-
+   
 export default CodeEditorPage;
