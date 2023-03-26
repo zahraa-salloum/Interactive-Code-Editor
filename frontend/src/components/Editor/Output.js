@@ -1,5 +1,3 @@
-
-
 const Output = (props) => {
   const {
     displayName,

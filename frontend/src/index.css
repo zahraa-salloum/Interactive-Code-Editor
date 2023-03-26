@@ -71,7 +71,9 @@ body{
 .code_editor_page {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
+  height: 100vh;
+
 }
 
 button.compile_btn {
@@ -82,3 +84,4 @@ button.compile_btn {
 .output_value {
   padding: 1%;
 }
+

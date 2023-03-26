@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import Editor from "../../components/Editor/Editor.js";
 import Output from "../../components/Editor/Output.js";
+import NavBar from "../../components/NavBar/Nav.jsx";
+import Footer from "../../components/Footer/footer.jsx";
 import axios from "axios";
 
 const CodeEditorPage = () => {
@@ -36,6 +38,10 @@ const CodeEditorPage = () => {
   };
 
   return (
+    <>
+    <div className="code_editor_page">
+    <NavBar />
+    <button className = "btn compile_btn" onClick={pythonCompile}>Run</button>
     <div className="container_code_editor">
       <div className="pane top-pane">
         <Editor
@@ -46,10 +52,15 @@ const CodeEditorPage = () => {
         />
       </div>
       <div className="pane top_pane">
-        <Output value={code_output} />
+        <Output 
+        displayName="Output"
+        value={code_output} />
       </div>
-      <button onClick={pythonCompile}>click me to compile</button>
     </div>
+    </div>
+    <Footer />
+    
+    </>
   );
 };
 
