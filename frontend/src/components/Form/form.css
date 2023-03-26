@@ -1,13 +1,16 @@
 .form_container{
+    padding: 5%;
     margin-top: 10%;
-    margin-left: 40%;
+    margin-left: 35%;
     display: flex;
     width: 20%;
     flex-direction: column;
-   
-
+    align-items: center;
+    justify-content: center;
+    border:1px solid #F88379;
+    border-radius: 10px;
+    box-shadow: 12px 0 15px -4px rgb(253, 253, 253), -12px 0 8px -4px #4C5D70;
 }
 h1{
-    text-align: center;
     margin-bottom: 10%;
 }
