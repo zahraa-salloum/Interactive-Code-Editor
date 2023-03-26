@@ -6,14 +6,15 @@ const Search = () => {
     const [user, setUser] = useState('');
     const [responses, setResponses] = useState([]);
 
+    const JWT = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODQ4NTkyLCJleHAiOjE2Nzk4NTIxOTIsIm5iZiI6MTY3OTg0ODU5MiwianRpIjoiQVNOR0VhZVZENUNib0JJViIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OJd-32AuGwnct-VwCB3orxZAMvyjDBUaFGdRRMZ7k0w'
     useEffect(() => {
-        //const JWTKey = localStorage.getItem('myKey');
+        //const JWTKey = localStorage.getItem('JWT');
         const fetchUsers = async() => {
             await axios({
                 method: 'GET',
                 url: 'http://127.0.0.1:8000/api/v0.0.1/get_all_users',
                 headers: {
-                    Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODQyMzQ1LCJleHAiOjE2Nzk4NDU5NDUsIm5iZiI6MTY3OTg0MjM0NSwianRpIjoiVExmRGhwR3NpMUVtOWtZWCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.gGdG30mFpnN7ia-WUwTKpGrzNlarm538nOq5DuFnukA'
+                    Authorization: 'Bearer ' + JWT
                 }
             }).then((res) => {
                 console.log(res.data.users);
@@ -42,7 +43,7 @@ const Search = () => {
             </div>
             <div className='fetch-users'>
                 {responses.map((response) => {
-                    return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name}/>
+                    return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
                 })};
 
             </div>
