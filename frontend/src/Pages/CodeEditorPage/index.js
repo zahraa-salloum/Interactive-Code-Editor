@@ -1,16 +1,38 @@
 import React, { useState } from "react";
 import Editor from "../../components/Editor/Editor.js";
-// import Editor from "../components/Editor/Output.js";
+import Output from "../../components/Editor/Output.js";
+import axios from "axios";
 
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
-  const [output, setOutput] = useState("");
+  const [code_output, setOutput] = useState("Waiting for your code ...");
 
-  const pythonCompile = async (e) => {
+  const pythonCompile = async () => {
     const python_code = python;
-    const pyodide = await window.loadPyodide();
-    const output = pyodide.runPython(python_code);
-    setOutput(output);
+
+    const encodedParams = new URLSearchParams();
+    encodedParams.append("LanguageChoice", "5");
+    encodedParams.append("Program", python_code);
+
+    const options = {
+      method: "POST",
+      url: "https://code-compiler.p.rapidapi.com/v2",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+        "X-RapidAPI-Key": "68d519edb5mshba2573f86109024p1f84e8jsn394c08753888",
+        "X-RapidAPI-Host": "code-compiler.p.rapidapi.com",
+      },
+      data: encodedParams,
+    };
+
+    axios
+      .request(options)
+      .then(function (response) {
+        setOutput(response.data.Result);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 
   return (
@@ -24,7 +46,7 @@ const CodeEditorPage = () => {
         />
       </div>
       <div className="pane top_pane">
-        <div className="output_container top_pane">{output}</div>
+        <Output value={code_output} />
       </div>
       <button onClick={pythonCompile}>click me to compile</button>
     </div>
