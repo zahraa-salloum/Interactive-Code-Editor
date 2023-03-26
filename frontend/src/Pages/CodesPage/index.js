@@ -12,7 +12,7 @@ return(
     <div>
         
         <NavBar/>
-        
+       
         
     </div>
 )
