@@ -4,12 +4,12 @@ import "./style.css";
 
 
 
-const CodePreview = ({code_title,code_content}) => {
+const CodePreview = ({code_title,code_content,onclick}) => {
 return(
     <div className="container_code_download">
     <div className="container_code_title">{code_title}</div>
     <div className="container_code_content">{code_content}</div>
-    <DownloadButton name={"Download File"}/>
+    <DownloadButton onclick={onclick} name={"Download File"}/>
     </div>
 
 )

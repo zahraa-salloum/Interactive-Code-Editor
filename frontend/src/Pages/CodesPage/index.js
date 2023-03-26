@@ -29,6 +29,10 @@ const CodesPage = () => {
         getCodes()
     },[]) 
 
+    const download = () => {
+        
+    }
+
 return(
     <div>
         
@@ -40,6 +44,7 @@ return(
                     <CodePreview 
                     code_title={"Code #"+(i++)+"  Date: "+message['created_at']}
                     code_content={message['code']}
+                    onclick={download}
                 />
                 </React.Fragment>
 
