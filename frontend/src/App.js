@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from './Pages/HomePage';
 import CodeEditorPage from './Pages/CodeEditorPage';
 import RegisterPage from "./Pages/RegisterPage";
+import AdminPage from "./Pages/AdminPage";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Route path="/code_editor" element={<CodeEditorPage />} />
       <Route path="*" element={<div>404</div>} />
       <Route path="/register" element={<RegisterPage/>}/>
+      <Route path="/admin" element={<AdminPage/>}/>
 
     </Routes> 
   );
