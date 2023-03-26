@@ -6,7 +6,9 @@ const Header = () => {
             <div className='main-header-title'>
                 <h1>Best Online Code Editor</h1>
             </div>
-            <Button name={'Join Us!'}/>
+            <div className='btn-div'>
+                <Button name={'Join Us!'}/>
+            </div>
         </div>
     );
 }

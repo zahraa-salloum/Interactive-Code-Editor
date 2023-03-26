@@ -4,6 +4,7 @@
     font-family: 'Urbanist';
 }
 .main-header-home{
+    border: 1px solid black;
     background-color: #F88379;
     width: 100%;
     height: 80vh;
@@ -14,15 +15,23 @@
 }
 .main-header-title{
     text-align: center;
-    width: 50%;
+    width: 70%;
+    height: 50%;
     font-size: 80px;
+}
+.btn-div{
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 480px) {
     .main-header-home{
         height: 70vh;
     }
     .main-header-title{
-        width: 80%;
+        width: 90%;
         font-size: 40px;
     }
   }
