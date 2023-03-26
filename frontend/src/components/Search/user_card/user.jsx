@@ -1,10 +1,12 @@
 import '../search.css'
-const UserCard = () => {
-    <div className='user_card'>
-        <h1>UserName</h1>
+const UserCard = ({firstName, lastName, bio}) => {
+    return(
+        <div className='user_card'>
+        <h1>{firstName} {lastName}</h1>
         <img className='user-profile-img' src='#'/>
-        <p></p>
+        <p>{bio}</p>
         <button>Chat Now!</button>
     </div>
+    );
 }
 export default UserCard

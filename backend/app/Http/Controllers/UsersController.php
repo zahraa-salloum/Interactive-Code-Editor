@@ -53,5 +53,26 @@ class UsersController extends Controller
             'user' => $user
         ]);
     }
+
+    public function filter(Request $request){
+        $query = User::query();
+        if ($request->has('name')) {
+            $name = $request->input('name');
+            $query->where(function ($query) use ($name) {
+                $query->where('first_name', 'LIKE', '%'.$name.'%')
+                    ->orWhere('last_name', 'LIKE', '%'.$name.'%');
+            });
+        }
+        $users = $query->get();
+        if ($users->isEmpty()) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'No users found'
+            ], 404);
+        }
+        return response()->json([
+            'data' => $users,
+        ]);
+    }
 }
 
