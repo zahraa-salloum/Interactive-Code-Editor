@@ -42,8 +42,8 @@ class CodesController extends Controller
                 'message' => 'Unauthorized'
             ], 401);
         }
-        $code = Code::where('user_id', $user->id)->first();
-        if (!$code) {
+        $codes = Code::where('user_id', $user->id)->get(); // fetch all codes for user
+        if (!$codes->count()) { // check if there are no codes for the user
             return response()->json([
                 'status' => 404,
                 'message' => 'No code found for this user'
@@ -51,7 +51,8 @@ class CodesController extends Controller
         }
         return response()->json([
             'status' => 200,
-            'message' => $code->code
+            'message' => $codes
         ], 200);
     }
+    
 }
