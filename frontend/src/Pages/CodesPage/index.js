@@ -13,7 +13,7 @@ const CodesPage = () => {
     
 
     // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODY0OTA0LCJleHAiOjE2Nzk4Njg1MDQsIm5iZiI6MTY3OTg2NDkwNCwianRpIjoiYUZtak1IVmQ0WnU5T0g3SSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.102BcgmeI9gTkTuMAekcSajkuC8OKBv5wmXmjKKwwMk"
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODczMzEzLCJleHAiOjE2Nzk4NzY5MTMsIm5iZiI6MTY3OTg3MzMxMywianRpIjoibGNrRG1QTERJR1Rza1NTcCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FTkf6tA_c5tJvMgxgEIsCHfnbjbCUdoXumB_rKzxrKk"
 
     useEffect(() => {
         const getCodes = () => {
@@ -56,6 +56,7 @@ return(
 
            ))}
         </div>
+        <Footer/>
         
         
         
