@@ -39,3 +39,18 @@ nav{
 .nav-links-container a:hover{
     text-decoration: underline;
 }
+
+@media screen and (max-width: 480px) {
+    nav{
+        width: 100%;
+        min-height: 50px;;
+    }
+    .nav-logo-container{
+        width: 150px;
+        height: 3rem;
+        margin-top: 2%;
+    }
+    .nav-links-container{
+        display: none;
+    }
+  }

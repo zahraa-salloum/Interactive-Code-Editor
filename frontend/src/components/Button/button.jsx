@@ -1,7 +1,7 @@
 import './button.css';
 const Button = ({name}) => {
     return (
-        <button>
+        <button className='btn'>
             {name}
         </button>
     );

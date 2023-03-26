@@ -6,7 +6,7 @@
 .footer-section{
     background-color: #F88379;
     width: 100%;
-    height: vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,4 +42,37 @@ a{
 a:hover{
     text-decoration: underline;
     color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-section{
+        background-color: #F88379;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        justify-content: left;
+        align-items: start;
+    }
+    .footer-section-links{
+        width: 70%;
+        height: 70%;
+    }
+    ul{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: space-between;
+    }
+    li{
+        margin-top: 5%;
+        font-size: 20px;
+    }
+    .footer-action{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 10%;
+    }
 }
