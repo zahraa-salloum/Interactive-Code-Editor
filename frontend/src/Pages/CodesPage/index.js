@@ -13,7 +13,7 @@ const CodesPage = () => {
     
 
     // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODYwOTc3LCJleHAiOjE2Nzk4NjQ1NzcsIm5iZiI6MTY3OTg2MDk3NywianRpIjoiMk05VmVFaXZ3dUtOd0xLaCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DFYyvmtuOc4jeohckOkYYF-P_4ITcxQBgzeqf6uoPxM"
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODY0OTA0LCJleHAiOjE2Nzk4Njg1MDQsIm5iZiI6MTY3OTg2NDkwNCwianRpIjoiYUZtak1IVmQ0WnU5T0g3SSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.102BcgmeI9gTkTuMAekcSajkuC8OKBv5wmXmjKKwwMk"
 
     useEffect(() => {
         const getCodes = () => {
@@ -30,7 +30,13 @@ const CodesPage = () => {
     },[]) 
 
     const download = (code) => {
-        console.log(code)
+        const blob = new Blob([code], { type: "text/plain" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.download = "mycode.txt";
+        link.href = url;
+        link.click();
+       
     }
 
 return(
