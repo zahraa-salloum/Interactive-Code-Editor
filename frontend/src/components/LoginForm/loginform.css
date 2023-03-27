@@ -15,3 +15,10 @@
 h1{
     margin-bottom: 10%;
 }
+p{
+    font-family: 'Urbanist';
+    color: white;
+}
+p:hover{
+    cursor: pointer;
+}

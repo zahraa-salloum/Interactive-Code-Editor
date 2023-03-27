@@ -48,7 +48,8 @@ return(
          <Partition Lname={"Email"} Itype={"email"} onChange={handleEmail}/>
          <Partition Lname={"Password"} Itype={"password"} onChange={handlePassword}/>
          <RegisterButton name={"Sign up"} onSubmit={handleSubmit}/>
-         <Button name={'Already have an account?'} action={signinNavigation}/>
+         <br />
+         <p onClick={signinNavigation}>already have an account?</p>
  </div>
 )
 }
