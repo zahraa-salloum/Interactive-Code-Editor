@@ -5,6 +5,9 @@ import {useNavigate} from 'react-router-dom';
 const NavBar = () => {
     const navigator = useNavigate();
     const registerNavigation = () => {
+        navigator('/login');
+    }
+    const signupNavigation = () => {
         navigator('/register');
     }
     return (
@@ -18,7 +21,8 @@ const NavBar = () => {
                 <a href="#whyus">Why Us/Benefit</a>
                 <a href="#look">Take A Look</a>
             </div>
-            <Button name={'Sign Up'} action={registerNavigation}/>
+            <Button name={'Register'} action={signupNavigation}/>
+            <Button name={'Log In'} action={registerNavigation}/>
         </nav>
     );
 }

@@ -13,7 +13,7 @@ const [password,setPassword]=useState("")
 
 const navigator = useNavigate();
 const signinNavigation = () => {
-    navigator('/register');}
+    navigator('/login');}
 
 const handleFirst=(e)=>{
    setFirst(e.target.value)

@@ -2,7 +2,7 @@ import NavBar from "../../components/NavBar/Nav";
 import LoginForm from "../../components/LoginForm/loginform";
 
 
-const Register = () => {
+const Login = () => {
     return (
         <>
             <NavBar/>
@@ -10,4 +10,4 @@ const Register = () => {
        </>
     );
 }
-export default Register;
+export default Login;
