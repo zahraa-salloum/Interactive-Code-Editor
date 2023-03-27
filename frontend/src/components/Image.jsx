@@ -1,4 +1,5 @@
-import './WhyUs/whyUs.css';
+// import './WhyUs/whyUs_benefit.css';
+import '../components/WhyUs/whyUs'
 const Image = () => {
     return (
         <div className='left-side'>

@@ -19,3 +19,17 @@
     color:var(--white)
 }
 
+.chat_list{
+    margin-top: 10%;
+    background-color: var(--serenity);
+}
+
+.chat_list:first-child{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.chat_name{
+    /* background-color: var(--serenity); */
+    align-self: c;
+}
+

@@ -10,7 +10,7 @@ const ChatsPage = () => {
 
     const [list, setList] = useState([]);
 
-const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODgxMzc3LCJleHAiOjE2Nzk4ODQ5NzcsIm5iZiI6MTY3OTg4MTM3NywianRpIjoicTZDeWJCcGh1YWx0SlJVVSIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.IpIWAI5R-Y-Ip4S3W2CX8gycZdAwso_He8xgCra9XNo"
+    const token = localStorage.getItem('token');
 
 useEffect(() => {
     const getChats = () => {

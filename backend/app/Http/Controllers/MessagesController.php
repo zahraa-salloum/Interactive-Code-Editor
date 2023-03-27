@@ -14,7 +14,7 @@ class MessagesController extends Controller
     public function getAllMessages(Request $request){
 
         $user_id = Auth::id();
-        $query = User::join('messages','users.id', '=','messages.sender_id')->where('sender_id',$user_id)->orWhere('receiver_id',$user_id)->get();
+        $query = User::join('messages','users.id', '=','messages.sender_id')->where('sender_id',$user_id)->orWhere('receiver_id',$user_id)->get('*','id as users.id');
         
     
 
