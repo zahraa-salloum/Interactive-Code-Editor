@@ -141,6 +141,7 @@ img.user_image {
   width: 300px;
   box-shadow: 0px 0px 20px var(--black);
   transition: 0.5s;
+  background-color:#D0E6F0;
 }
 
 .update_info{

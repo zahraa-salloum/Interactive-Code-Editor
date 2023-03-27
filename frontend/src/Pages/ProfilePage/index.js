@@ -23,7 +23,7 @@ const ProfilePage = () => {
     const reader = new FileReader();
     reader.onload = () => {
       const base64String = reader.result;
-      setProfile(base64String);
+      setImage(base64String);
     };
     reader.readAsDataURL(picture);
   };

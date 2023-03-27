@@ -15,3 +15,10 @@
 .form_title{
     margin-bottom: 10%;
 }
+.test{
+    font-family: 'Urbanist';
+    color:white;
+}
+.test:hover{
+    cursor: pointer;
+}

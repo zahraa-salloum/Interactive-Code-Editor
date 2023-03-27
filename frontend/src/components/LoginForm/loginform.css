@@ -17,8 +17,5 @@ h1{
 }
 .error{
     font-family: 'Urbanist';
-    color: white;
-}
-.error:hover{
-    cursor: pointer;
+    color: var(--coral);
 }
