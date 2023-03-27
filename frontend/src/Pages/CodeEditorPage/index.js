@@ -43,6 +43,24 @@ const CodeEditorPage = () => {
       });
   };
 
+  // const token = window.localStorage.getItem('token');
+  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODcwMzkzLCJleHAiOjE2Nzk4NzM5OTMsIm5iZiI6MTY3OTg3MDM5MywianRpIjoiUE9CT1B3ZTJyU2xBak0xdyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.c0W2fdQ8Ipyk42ZHz8L7qxBNQ9c4MbpgaGH418h1AIU';
+
+  const saveCode = async () =>{
+    const data = new FormData();
+    data.append('code',python);
+
+      axios.post('http://127.0.0.1:8000/api/v0.0.1/store_code',data,{
+          headers: {
+              Authorization: `Bearer ${token}`
+          }
+      }).then(response => {
+          console.log(response.data)
+      })
+  }
+
+  
+
   return (
     <>
     <div className="code_editor_page">
@@ -64,7 +82,7 @@ const CodeEditorPage = () => {
       </div>
       
     </div>
-    <button className = "btn compile_btn" onClick={pythonCompile}>Save</button>
+    <button className = "btn save_btn compile_btn" onClick={saveCode}>Save</button>
     </div>
     <Footer />
     

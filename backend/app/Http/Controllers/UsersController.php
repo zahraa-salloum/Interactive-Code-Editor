@@ -17,13 +17,12 @@ class UsersController extends Controller
         }else{
             $detail = Detail::where('user_id',$id)->first();
         }
-        // $extension = $request->image_extension;
-        // $profile_pic = $request->profile_pic_encoded;  // your base64 encoded
-        // $profile_pic = str_replace('data:image/'.$extension.';base64,', '', $profile_pic);
-        // $profile_pic = str_replace(' ', '+', $profile_pic);
-        // $image = base64_decode($profile_pic);
-        // $profile_pic_name = time() . '-' .$user->first_name . '.' . $extension;
-        // Storage::disk('public')->put('images/'. $profile_pic_name,$image);
+        $profile_pic = $request->profile_pic_encoded;  // your base64 encoded
+        $profile_pic = str_replace('data:image/jpeg;base64,', '', $profile_pic);
+        $profile_pic = str_replace(' ', '+', $profile_pic);
+        $image = base64_decode($profile_pic);
+        $profile_pic_name = time() . '-' .$id . '.' . 'jpeg';
+        Storage::disk('public')->put('images/'. $profile_pic_name,$image);
 
             
             $detail->bio = $request->bio;
