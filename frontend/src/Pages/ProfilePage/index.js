@@ -14,7 +14,8 @@ const ProfilePage = () => {
   const [message, setMessage] = useState("");
 
   const handleBioChange= (e) =>{
-    setBio(e.target.value)
+      setBio(e.target.value)
+
   }
 
 
@@ -23,7 +24,7 @@ const ProfilePage = () => {
     const reader = new FileReader();
     reader.onload = () => {
       const base64String = reader.result;
-      setImage(base64String);
+      setProfile(base64String);
     };
     reader.readAsDataURL(picture);
   };
@@ -46,6 +47,8 @@ const token = localStorage.getItem('token');
             window.location.reload()
           }, 500);
           
+      }).catch((err) =>{
+        setMessage("You must fill all the fields.")
       })
       
   }
@@ -61,9 +64,9 @@ const token = localStorage.getItem('token');
         }).then((res) => {
             console.log(res.data);
             console.log(res.data[0].picture);
-            setImage(res.data[0].picture);
-            setBiography(res.data[0].bio);
             setName(res.data.user.first_name);
+            setBiography(res.data[0].bio);
+            setImage(res.data[0].picture);
 
             // setResponses(res.data.users);
         }).catch((err) => {
@@ -80,9 +83,9 @@ const token = localStorage.getItem('token');
       onChange={handleBioChange}
       onSubmit={handleSubmit}
       onUpload={handlePictureChange}
-      image={image}
-      bio={biography}
       first_name = {first_name}
+      bio={biography}
+      image={image}
       message={message}
        />
       <Footer />

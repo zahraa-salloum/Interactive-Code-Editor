@@ -59,10 +59,10 @@ const Search = () => {
                 </div>
                 <div className='user-actions'>
                     <form className = "filter_section" onSubmit={handleSubmit}>
-                        <input type="text" required value={ user } onChange = {(e) => setUser(e.target.value)} placeholder='User Name'/>
+                        <input className="search_input" type="text" required value={ user } onChange = {(e) => setUser(e.target.value)} placeholder='User Name'/>
                         <button className="btn profile_submit_btn">Filter</button>
-                    </form>
-                    <button className="clear-btn" onClick={handleClear}>Clear</button>
+                        <button className="btn clear-btn" onClick={handleClear}>Clear</button>
+                    </form>  
                 </div>
             </div>
             <div className='fetch-users'>
