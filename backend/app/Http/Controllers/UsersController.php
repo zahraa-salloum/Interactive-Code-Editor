@@ -52,11 +52,11 @@ class UsersController extends Controller
     //    }
 
     function getUsers(Request $request){
-        $userId = $request->user()->id; // extract user ID from JWT token
+        $userId = $request->user()->id;
         $all = User::leftjoin('details','details.user_id','=','users.id')
                   ->select('*', 'users.id as id')
                   ->where('user_type_id',2)
-                  ->where('users.id', '<>', $userId) // exclude current user
+                  ->where('users.id', '<>', $userId)
                   ->get();
         return response()->json([
             'status' => 200,
@@ -73,11 +73,13 @@ class UsersController extends Controller
             'user' => $user,$details
         ]);
     }
-    
-
     function filter(Request $request){
-        $query = User::leftJoin('details', 'details.user_id', '=', 'users.id')->select('*', 'users.id as id')->where('user_type_id', 2);
-    
+        $userId = Auth::id();
+        $query = User::leftJoin('details', 'details.user_id', '=', 'users.id')
+            ->select('*', 'users.id as id')
+            ->where('user_type_id', 2)
+            ->where('users.id', '<>', $userId);
+        
         if ($request->has('name')) {
             $name = $request->input('name');
             $query->where(function ($q) use ($name) {
@@ -85,8 +87,13 @@ class UsersController extends Controller
                     ->orWhere('last_name', 'LIKE', '%'.$name.'%');
             });
         }
-    
         $users = $query->get();
+        if($users -> isEmpty()){
+            return response() -> json([
+                'status'=> 404,
+                'users' => 'User Not Found'
+            ],404);
+        }
         return response()->json([
             'status' => 200,
             'users' => $users

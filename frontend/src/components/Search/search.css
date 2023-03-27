@@ -73,3 +73,18 @@ button{
     border-radius: 50%;
     margin-top: 0;
 }
+.user-actions{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.clear-btn{
+    background-color: var(--coral);
+    color: white;
+    font-weight: 500;
+}
+.clear-btn:hover{
+    background-color: var(--serenity);
+    color: var(--charcoal);
+}
