@@ -16,7 +16,6 @@ input{
     border-radius: 10px;
     background-color: var(--charcoal);
     color: var(--white);
-    font-size: 500px;
     
 }
 input[type='password'] {
