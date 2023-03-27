@@ -8,8 +8,7 @@ import { Navigate } from "react-router-dom";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const[error1,setError1]=useState("");
-  const[error2,setError2]=useState("");
+  const[error,setError]=useState("");
 
 const handleEmail=(e)=>{
       setEmail(e.target.value)
@@ -28,26 +27,21 @@ const handleEmail=(e)=>{
       
   
   const handleSubmit=()=>{
-   // if(validateEmail(email))
+    if (validateEmail(email)){
+        if(validatePassword(password)){
     const data = new FormData()
     data.append("email",email)
     data.append("password",password )
     axios.post("http://127.0.0.1:8000/api/v0.0.1/auth/login",data).then((res) => {
-        if (res.status===200){
         console.log(res)
         localStorage.setItem('token',res.data.authorisation.token);
-       {window.location.href="http://localhost:3000/code_editor"}}
-    }).catch((err) => {
+        window.location.href="http://localhost:3000/code_editor"  
+}
+    ).catch((err) => {
         console.log(err);
-        if (!validateEmail(email)){
-            setError1(`Email is not verified`)
-        }
-        if (!validatePassword(password)){
-            setError2(`Password is not verified`)
-        }
-
     })
-
+}else(setError("Invalid credentials"))
+}else(setError("Invalid credentials"))
   }
 
     return(
@@ -56,7 +50,7 @@ const handleEmail=(e)=>{
         <Partition Lname={"Email"} Itype={"email"} onChange={handleEmail} size="40" />
         <Partition Lname={"password"} Itype={"password"} onChange={handlePassword}/>
         <RegisterButton name={"Login"} onSubmit={handleSubmit}/>
-        <p className="error">{error1}<br/><br/>{error2}</p>
+        <p className="error"><br/>{error}</p>
         </div>
     );}
 

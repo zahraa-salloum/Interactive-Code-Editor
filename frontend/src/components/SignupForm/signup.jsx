@@ -44,7 +44,7 @@ axios.post("http://127.0.0.1:8000/api/v0.0.1/register",data).then((res) => {
 }
 return(
     <div className="form_container">
-         <h1> Kindly fill the form</h1>
+         <h1 className="form_title"> Kindly fill the form</h1>
          <Partition Lname={"First Name"} Itype={"text"} onChange={handleFirst}/>
          <Partition Lname={"Last Name"} Itype={"text"} onChange={handleLast}/>
          <Partition Lname={"Email"} Itype={"email"} onChange={handleEmail}/>
