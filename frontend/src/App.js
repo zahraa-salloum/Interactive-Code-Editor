@@ -7,6 +7,7 @@ import CodesPage from "./Pages/CodesPage";
 import DisplayUsers from "./Pages/DisplayUsersPage";
 import ChatsPage from "./Pages/ChatsPage/index"
 import ProfilePage from "./Pages/ProfilePage";
+import SignUpPage from "./components/SignupForm/signup";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/users" element={<DisplayUsers/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
       <Route path="*" element={<div>404</div>} />
+      <Route path="/sign_up" element={<SignUpPage />} />
 
     </Routes> 
   );

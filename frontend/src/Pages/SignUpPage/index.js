@@ -1,12 +1,12 @@
 import NavBar from "../../components/NavBar/Nav";
-import LoginForm from "../../components/LoginForm/loginform";
+import SignUpForm from "../../components/SignupForm/signup";
 
 
 const Register = () => {
     return (
         <>
             <NavBar/>
-            <LoginForm/>
+            <SignUpForm/>
        </>
     );
 }
