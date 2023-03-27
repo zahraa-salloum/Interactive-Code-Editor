@@ -78,9 +78,7 @@ body{
 .code_editor_page {
   display: flex;
   flex-direction: column;
-  align-items: center;  
-  height: 100vh;
-
+  align-items: center;
 }
 
 button.compile_btn {
@@ -94,4 +92,8 @@ button.compile_btn {
 
 img.logo {
   max-width: 70px;
+}
+
+.save_btn {
+  margin-bottom: 5%;
 }

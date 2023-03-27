@@ -21,7 +21,7 @@ Route::group(['prefix' => 'v0.0.1'], function(){
         Route::get('/get_all_messages',[MessagesController::class,"getAllMessages"]);
         Route::post('/store_code', [CodesController::class, "storeCode"]);
         Route::get('/get_code', [CodesController::class, "getCodeByAuth"]);
-        Route::post('add_details/{add?}',[UsersController::class, 'addUserDetails']); 
+        Route::post('/add_details/{add?}',[UsersController::class, 'addUserDetails']); 
         Route::get('/get_all_users',[UsersController::class,'getUsers']);
         Route::get('/filter_user',[UsersController::class,'filter']);
         Route::post('/search_messages',[MessagesController::class,"searchMessages"]);

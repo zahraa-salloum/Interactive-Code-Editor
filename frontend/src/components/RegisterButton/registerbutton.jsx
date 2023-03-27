@@ -1,7 +1,7 @@
 import './registerbutton.css';
-const RegisterButton = ({name}) => {
+const RegisterButton = ({name,onSubmit}) => {
     return (
-        <button className='register_button'>
+        <button className='register_button'onClick={onSubmit}>
             {name}
         </button>
     );
