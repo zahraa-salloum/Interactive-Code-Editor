@@ -25,7 +25,7 @@ class UsersController extends Controller
         $image = base64_decode($profile_pic);
         $extension = strtolower(explode('/', $type)[1]);
         $profile_pic_name = time() . '-' .$id . '.' . $extension;
-        Storage::disk('public')->put('images/'. $profile_pic_name,$image);        
+        Storage::disk('public')->put('images/'. $profile_pic_name,$image);
 
               
             $detail->picture = 'http://127.0.0.1:8000/storage/images/'. $profile_pic_name;

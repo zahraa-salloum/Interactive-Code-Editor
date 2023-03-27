@@ -7,6 +7,7 @@ import CodesPage from "./Pages/CodesPage";
 import DisplayUsers from "./Pages/DisplayUsersPage";
 import ChatsPage from "./Pages/ChatsPage/index"
 import ProfilePage from "./Pages/ProfilePage";
+import SignUpPage from "./components/SignupForm/signup";
 
 
 function App() {
@@ -16,11 +17,13 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/code_editor" element={<CodeEditorPage />} />
       <Route path="/codes" element={<CodesPage/>}/>
-      <Route path="/register" element={<RegisterPage/>}/>
+      <Route path="/login" element={<RegisterPage/>}/>
       <Route path="/admin" element={<AdminPage/>}/>
       <Route path="/users" element={<DisplayUsers/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
+      <Route path="/chat" element={<ChatsPage/>}/>
       <Route path="*" element={<div>404</div>} />
+      <Route path="/register" element={<SignUpPage />} />
 
     </Routes> 
   );

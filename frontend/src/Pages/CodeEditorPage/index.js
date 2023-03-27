@@ -4,6 +4,7 @@ import Output from "../../components/Editor/Output.js";
 import NavBar from "../../components/NavBar/Nav.jsx";
 import Footer from "../../components/Footer/footer.jsx";
 import axios from "axios";
+import Dashboard from "../../components/Dashboard_NavBar/dashboard_nav.jsx";
 
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
@@ -64,7 +65,7 @@ const CodeEditorPage = () => {
   return (
     <>
     <div className="code_editor_page">
-    <NavBar />
+    <Dashboard/>
     <button className = "btn compile_btn" onClick={pythonCompile}>Run</button>
     <div className="container_code_editor">
       <div className="pane top-pane">
@@ -84,8 +85,6 @@ const CodeEditorPage = () => {
     </div>
     <button className = "btn save_btn compile_btn" onClick={saveCode}>Save</button>
     </div>
-    <Footer />
-    
     </>
   );
 };

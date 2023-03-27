@@ -1,13 +1,13 @@
 import NavBar from "../../components/NavBar/Nav";
-import Form from "../../components/Form/form";
+import LoginForm from "../../components/LoginForm/loginform";
 
 
-const Register = () => {
+const Login = () => {
     return (
         <>
             <NavBar/>
-            <Form/>
+            <LoginForm/>
        </>
     );
 }
-export default Register;
+export default Login;

@@ -1,13 +1,10 @@
-import './Nav.css';
+import '../NavBar/Nav.css';
 import Logo from '../../assets/logo.svg'
 import Button from '../Button/button';
 import {useNavigate} from 'react-router-dom';
-const NavBar = () => {
+const Dashboard = () => {
     const navigator = useNavigate();
     const registerNavigation = () => {
-        navigator('/login');
-    }
-    const signupNavigation = () => {
         navigator('/register');
     }
     return (
@@ -16,14 +13,14 @@ const NavBar = () => {
                 <a href="/"><img className = "logo" src={Logo} alt="Logo" /></a>
             </div>
             <div className="nav-links-container">
-                <a href="#header">Home</a>
-                <a href="#mission" >Our Mission</a>
-                <a href="#whyus">Why Us/Benefit</a>
-                <a href="#look">Take A Look</a>
+                <a href="/profile">Profile</a>
+                <a href="/code_editor">Compiler</a>
+                <a href="/users" >Search User</a>
+                <a href="/chat">Chat</a>
+                <a href="/codes">My Codes</a>
             </div>
-            <Button name={'Register'} action={signupNavigation}/>
-            <Button name={'Log In'} action={registerNavigation}/>
+            <Button name={'Log out'} action={registerNavigation}/>
         </nav>
     );
 }
-export default NavBar;
+export default Dashboard;
