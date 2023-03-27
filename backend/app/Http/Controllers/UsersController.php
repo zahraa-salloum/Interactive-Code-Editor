@@ -38,13 +38,26 @@ class UsersController extends Controller
             ]);
         }
     
+    // function getUsers(Request $request){
+    //     $all = User::leftjoin('details','details.user_id','=','users.id')->select('*', 'users.id as id')->where('user_type_id',2)->get();
+    //     return response()->json([
+    //         'status' => 200,
+    //         'users' => $all
+    //     ]);
+    //    }
+
     function getUsers(Request $request){
-        $all = User::leftjoin('details','details.user_id','=','users.id')->select('*', 'users.id as id')->where('user_type_id',2)->get();
+        $userId = $request->user()->id; // extract user ID from JWT token
+        $all = User::leftjoin('details','details.user_id','=','users.id')
+                  ->select('*', 'users.id as id')
+                  ->where('user_type_id',2)
+                  ->where('users.id', '<>', $userId) // exclude current user
+                  ->get();
         return response()->json([
             'status' => 200,
             'users' => $all
         ]);
-       }
+    }
     
     function getUser(Request $request){
         $id = Auth::user()->id;

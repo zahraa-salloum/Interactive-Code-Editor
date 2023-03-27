@@ -51,7 +51,7 @@ button{
 .user_card{
     background-color: var(--serenity);
     width: 20%;
-    height: 55%;
+    height: 25rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -61,14 +61,15 @@ button{
     gap: 20px;
 }
 .user_card h1{
+    font-size: 2vw;
     color: var(--charcoal);
     margin-bottom: 0;
 }
 
 .user-profile-img{
     border: 1px solid var(--black);
-    width: 10rem;
-    height: 10rem;
+    width: 60%;
+    height: 50%;
     border-radius: 50%;
     margin-top: 0;
 }
