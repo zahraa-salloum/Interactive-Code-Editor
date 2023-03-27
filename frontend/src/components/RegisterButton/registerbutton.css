@@ -9,6 +9,7 @@
     cursor: pointer;
     background-color: var(--coral);
     color: var(--white);
+    margin-bottom: 5%;
 }
 button:hover{
     background-color: var(coral);
