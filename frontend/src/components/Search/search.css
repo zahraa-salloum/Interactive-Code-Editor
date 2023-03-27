@@ -1,12 +1,18 @@
 .search-header{
-    height: 10vh;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
-.search-header-text{
-    height: 50%;
+
+h1.search-title {
+    margin-bottom: 0;
+}
+
+form.filter_section {
+    gap: 20px;
+    align-items: baseline;
 }
 form{
     width: 30rem;
@@ -51,18 +57,14 @@ button{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding: 2%;
+    gap: 20px;
 }
 .user_card h1{
-    color: var(--black);
+    color: var(--charcoal);
     margin-bottom: 0;
 }
-.user_card p{
-    width: 15rem;
-    height: 5rem;
-}
+
 .user-profile-img{
     border: 1px solid var(--black);
     width: 10rem;

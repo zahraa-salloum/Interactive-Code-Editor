@@ -5,7 +5,7 @@ const UserCard = ({firstName, lastName, bio, image}) => {
         <h1>{firstName} {lastName}</h1>
         <img className='user-profile-img' src={image}/>
         <p>{bio}</p>
-        <button>Chat Now!</button>
+        <button className="btn profile_submit_btn">Chat Now!</button>
     </div>
     );
 }

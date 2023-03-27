@@ -3,6 +3,7 @@ import ProfileInput from "../../components/Profile/index.js";
 import Dashboard from "../../components/Dashboard_NavBar/dashboard_nav";
 import Footer from "../../components/Footer/footer.jsx";
 import axios from "axios";
+import NavBar from "../../components/NavBar/Nav.jsx";
 
 const ProfilePage = () => {
   const [bio, setBio] = useState("");
@@ -42,11 +43,11 @@ const token = localStorage.getItem('token');
   return (
     <div id="profile">
       <Dashboard/>
-      <h1>Complete your profile</h1>
       <ProfileInput 
       onChange={handleBioChange}
       onSubmit={handleSubmit}
       onUpload={handlePictureChange} />
+      <Footer />
     </div>
   )
 }

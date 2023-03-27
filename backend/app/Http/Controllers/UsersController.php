@@ -10,13 +10,13 @@ use Illuminate\Support\Facades\Validator;
 
 class UsersController extends Controller
 {
-    function addUserDetails(Request $request,$add=null){
+    function addUserDetails(Request $request){
         $id = Auth::id();
-        if($add == "add"){
+        $detail = Detail::where('user_id', $id)->first();
+        if(!$detail) {
             $detail = new Detail;
-        }else{
-            $detail = Detail::where('user_id',$id)->first();
         }
+        
         $profile_pic = $request->profile;  // your base64 encoded
         list($type, $profile_pic) = explode(';', $profile_pic);
         list(, $type) = explode(':', $type);
@@ -49,11 +49,13 @@ class UsersController extends Controller
     function getUser(Request $request){
         $id = Auth::user()->id;
         $user= User::find($id);
+        $details = Detail::where('user_id',$id)->first();
         return response()->json([
             'status' => 200,
-            'user' => $user
+            'user' => $user,$details
         ]);
     }
+    
 
     function filter(Request $request){
         $query = User::leftJoin('details', 'details.user_id', '=', 'users.id')->select('*', 'users.id as id')->where('user_type_id', 2);

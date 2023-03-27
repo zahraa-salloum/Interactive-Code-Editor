@@ -5,7 +5,8 @@ import {useNavigate} from 'react-router-dom';
 const Dashboard = () => {
     const navigator = useNavigate();
     const registerNavigation = () => {
-        navigator('/register');
+        localStorage.clear()
+        navigator('/');
     }
     return (
         <nav>
