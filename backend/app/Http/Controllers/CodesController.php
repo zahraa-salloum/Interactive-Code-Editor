@@ -27,7 +27,7 @@ class CodesController extends Controller
             ]);
             return response()->json([
                 'status' => 200,
-                'message' => 'Your Code is added successfully'
+                'message' => 'Your Code is saved successfully'
             ]);
         } catch (\Exception $e) {
             return response()->json([

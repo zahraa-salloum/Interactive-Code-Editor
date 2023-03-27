@@ -10,6 +10,7 @@ const CodeEditorPage = () => {
   const [python, setPython] = useState("");
   const [code_output, setOutput] = useState("Waiting for your code ...");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const pythonCompile = async () => {
     const python_code = python;
@@ -39,9 +40,10 @@ const CodeEditorPage = () => {
          <p key={index}>{code}</p>
       ))}
         setOutput(html);
+        setError("");
       })
       .catch(function (error) {
-        console.error(error);
+        setError("Your code is invalid");
       });
   };
 
@@ -70,6 +72,7 @@ const CodeEditorPage = () => {
     <div className="code_editor_page">
     <Dashboard/>
     <button className = "btn compile_btn" onClick={pythonCompile}>Run</button>
+    <div className = "message">{error}</div>
     <div className="container_code_editor">
       <div className="pane top-pane">
         <Editor
