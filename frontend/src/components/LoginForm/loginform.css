@@ -19,6 +19,6 @@ h1{
     font-family: 'Urbanist';
     color: white;
 }
-.erro:hover{
+.error:hover{
     cursor: pointer;
 }
