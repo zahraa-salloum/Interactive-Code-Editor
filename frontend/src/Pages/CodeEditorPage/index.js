@@ -9,6 +9,7 @@ import Dashboard from "../../components/Dashboard_NavBar/dashboard_nav.jsx";
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
   const [code_output, setOutput] = useState("Waiting for your code ...");
+  const [message, setMessage] = useState("");
 
   const pythonCompile = async () => {
     const python_code = python;
@@ -57,6 +58,8 @@ const CodeEditorPage = () => {
           }
       }).then(response => {
           console.log(response.data)
+          if(response.data){
+          setMessage(response.data.message)}
       })
   }
 
@@ -84,6 +87,7 @@ const CodeEditorPage = () => {
       
     </div>
     <button className = "btn save_btn compile_btn" onClick={saveCode}>Save</button>
+    <div className = "message">{message}</div>
     </div>
     </>
   );
