@@ -73,15 +73,16 @@ button{
     border-radius: 50%;
     margin-top: 0;
 }
-.user-actions{
-    width: 40%;
+
+.user-actions {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
+
 .clear-btn{
     background-color: var(--coral);
-    color: white;
+    color: var(--white);
     font-weight: 500;
 }
 .clear-btn:hover{

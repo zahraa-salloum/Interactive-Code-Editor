@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const profileInput = ({ onChange, onSubmit, onUpload,first_name,bio, image,message}) => {
+const profileInput = ({ onChange, onSubmit, onUpload,first_name,bio,image,message}) => {
 
   return (
     <div className="profile_container">
