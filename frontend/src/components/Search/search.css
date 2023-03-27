@@ -37,7 +37,7 @@ button{
     
 }
 .user_card{
-    background-color: var(--white);
+    background-color: var(--serenity);
     width: 20%;
     height: 55%;
     border-radius: 10px;

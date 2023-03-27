@@ -3,12 +3,13 @@ const TakeALook = () => {
     return (
         <div className='section'>
             <div className='main-container'>
-                <div className='text'>
+                <div className='title-code'>
                     <h1>Take a small look on our code editor</h1>
                 </div>
-                <div className='image'>
-                    <div className='code_snip'></div>
+                <div className='img-code'>
+                    <div className='code'></div>
                 </div>
+                
             </div>
         </div>
     );

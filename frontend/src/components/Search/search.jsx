@@ -6,7 +6,7 @@ const Search = () => {
     const [user, setUser] = useState('');
     const [responses, setResponses] = useState([]);
 
-    const JWT = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODQ4NTkyLCJleHAiOjE2Nzk4NTIxOTIsIm5iZiI6MTY3OTg0ODU5MiwianRpIjoiQVNOR0VhZVZENUNib0JJViIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OJd-32AuGwnct-VwCB3orxZAMvyjDBUaFGdRRMZ7k0w'
+    const JWT = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODczMzEzLCJleHAiOjE2Nzk4NzY5MTMsIm5iZiI6MTY3OTg3MzMxMywianRpIjoibGNrRG1QTERJR1Rza1NTcCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FTkf6tA_c5tJvMgxgEIsCHfnbjbCUdoXumB_rKzxrKk'
     useEffect(() => {
         //const JWTKey = localStorage.getItem('JWT');
         const fetchUsers = async() => {

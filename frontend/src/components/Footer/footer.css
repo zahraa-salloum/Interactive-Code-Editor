@@ -1,7 +1,6 @@
 .footer-section{
     background-color: var(--coral);
     width: 100%;
-    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +42,6 @@ a:hover{
     .footer-section{
         background-color: var(--coral);
         width: 100%;
-        height: 30vh;
         display: flex;
         justify-content: left;
         align-items: start;
