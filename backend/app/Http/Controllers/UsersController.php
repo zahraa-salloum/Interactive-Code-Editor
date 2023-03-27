@@ -49,11 +49,13 @@ class UsersController extends Controller
     function getUser(Request $request){
         $id = Auth::user()->id;
         $user= User::find($id);
+        $details = Detail::where('user_id',$id)->first();
         return response()->json([
             'status' => 200,
-            'user' => $user
+            'user' => $user,$details
         ]);
     }
+    
 
     function filter(Request $request){
         $query = User::leftJoin('details', 'details.user_id', '=', 'users.id')->select('*', 'users.id as id')->where('user_type_id', 2);
