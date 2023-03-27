@@ -1,13 +1,19 @@
 import Partition from "../Partition/partition";
 import  '../../components/LoginForm/loginform.css';
 import RegisterButton from "../RegisterButton/registerbutton";
+import Button from "../Button/button";
 import {useState} from "react";
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 const SignUp= ()=>{
 const [first,setFirst]=useState("")
 const [last,setLast]=useState("")
 const [email,setEmail]=useState("")
 const [password,setPassword]=useState("")
+
+const navigator = useNavigate();
+const signinNavigation = () => {
+    navigator('/register');}
 
 const handleFirst=(e)=>{
    setFirst(e.target.value)
@@ -42,7 +48,7 @@ return(
          <Partition Lname={"Email"} Itype={"email"} onChange={handleEmail}/>
          <Partition Lname={"Password"} Itype={"password"} onChange={handlePassword}/>
          <RegisterButton name={"Sign up"} onSubmit={handleSubmit}/>
-
+         <Button name={'Already have an account?'} action={signinNavigation}/>
  </div>
 )
 }
