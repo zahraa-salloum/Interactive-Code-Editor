@@ -1,4 +1,4 @@
-#Interactive-Code-Editor
+# Interactive-Code-Editor
 
 Languages used in this project: Frontend( React ) , Backend( laravel )
 
@@ -6,7 +6,7 @@ Authors: Ali Al Najjar - Fady Dib - Mahmoud Bakir - Saer El Masri - Zahraa Sallo
 
 Date: March 27 2023
 
-##User Stories
+## User Stories
 
 As a user I want to sign up so that I have an account on the website.
 
@@ -20,6 +20,6 @@ As a user I want to search for other developers so that I can chat with them.
 
 As an admin I want to view all users so that I can monitor my registered users.
 
-##Website Design on Figma
+## Website Design on Figma
 
 https://www.figma.com/file/88xZT9i2vuYVUwPP3DPFax/Interactive-Code-Editor?node-id=21-218&t=DQNpIVdtxWu1YekO-0
