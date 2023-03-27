@@ -3,12 +3,14 @@ import { useState } from "react"
 const profileInput = ({ onChange, onSubmit, onUpload }) => {
 
   return (
-    <div>
+    <div className="profile_container">
+    <h2 className="profile_title">Complete your profile</h2>
       <h3 className="profile_label">Describe yourself</h3>
-      <textarea name="description" rows="4" cols="50" onChange={onChange}></textarea>
+      <textarea className ="profile_textarea" name="description" rows="4" cols="50" onChange={onChange}></textarea>
       <input type ="file" name="profile_pic" onChange={onUpload}></input>
-      <button onClick={onSubmit}>Submit</button>
+      <button className = "btn profile_submit_btn" onClick={onSubmit}>Submit</button>
     </div>
+    
   )
 }
 
