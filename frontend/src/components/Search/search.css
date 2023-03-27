@@ -16,7 +16,7 @@ form{
 }
 input{
     width: 20rem;
-    height: 2rem;
+    height: 3rem;
     border: 1px solid var(--black);
     color: var(--white);
     font-size: 15px;
