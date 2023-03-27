@@ -50,11 +50,11 @@ const Search = () => {
         <div>
             <div className="search-header" id='users'>
                 <div className='search-header-text'>
-                    <h1>Search for a developer!</h1>
+                    <h1 className="search-title">Search for a developer!</h1>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form className = "filter_section" onSubmit={handleSubmit}>
                     <input type="text" required value={ user } onChange = {(e) => setUser(e.target.value)} placeholder='User Name'/>
-                    <button>Filter</button>
+                    <button className="btn profile_submit_btn">Filter</button>
                 </form>
             </div>
             <div className='fetch-users'>
