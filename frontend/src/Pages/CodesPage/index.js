@@ -1,9 +1,9 @@
 import React,{useState, useEffect} from 'react';
-import NavBar from '../../components/NavBar/Nav';
 import Footer from '../../components/Footer/footer';
 import axios from 'axios';
 import CodePreview from '../../components/CodePreview';
 import './style.css'
+import Dashboard from '../../components/Dashboard_NavBar/dashboard_nav';
 
 
 const CodesPage = () => {
@@ -41,7 +41,7 @@ const CodesPage = () => {
 return(
     <div>
         
-        <NavBar/>
+        <Dashboard/>
         <div className='container_flex_code'>
             {messages.map((message,index) => (
         
@@ -55,10 +55,6 @@ return(
 
            ))}
         </div>
-        <Footer/>
-        
-        
-        
     </div>
 )
 }

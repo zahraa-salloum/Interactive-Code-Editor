@@ -27,11 +27,28 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(user);
+        const fetch_filtered = async() => {
+            await axios({
+                method: 'GET',
+                url: 'http://127.0.0.1:8000/api/v0.0.1/filter_user',
+                params: {
+                    name: user
+                },
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }).then((res) => {
+                console.log(res.data.users);
+                setResponses(res.data.users);
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+        fetch_filtered();
     }
     return(
         <div>
-            <div className="search-header">
+            <div className="search-header" id='users'>
                 <div className='search-header-text'>
                     <h1>Search for a developer!</h1>
                 </div>
@@ -41,9 +58,11 @@ const Search = () => {
                 </form>
             </div>
             <div className='fetch-users'>
-                {responses.map((response) => {
-                    return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
-                })};
+                <div className='fetch'>
+                    {responses.map((response) => {
+                        return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
+                    })};
+                </div>
 
             </div>
 

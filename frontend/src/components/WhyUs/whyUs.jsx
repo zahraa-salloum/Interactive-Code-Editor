@@ -2,7 +2,7 @@ import './why_benefit.css';
 import Text from '../Text';
 const WhyUs = () => {
     return (
-        <div className='wrapper'>
+        <div className='wrapper' id='whyus'>
             <div className='why-container'>
                 <div className='img-why'></div>
                 <Text title={'Why we are different from others online code editors'} 

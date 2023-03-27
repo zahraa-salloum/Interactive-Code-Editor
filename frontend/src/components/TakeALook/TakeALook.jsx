@@ -1,7 +1,7 @@
 import './TakeALook.css';
 const TakeALook = () => {
     return (
-        <div className='section'>
+        <div className='section' id='look'>
             <div className='main-container'>
                 <div className='title-code'>
                     <h1>Take a small look on our code editor</h1>

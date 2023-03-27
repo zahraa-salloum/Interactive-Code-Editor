@@ -20,6 +20,7 @@ function App() {
       <Route path="/admin" element={<AdminPage/>}/>
       <Route path="/users" element={<DisplayUsers/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
+      <Route path="/chat" element={<ChatsPage/>}/>
       <Route path="*" element={<div>404</div>} />
 
     </Routes> 

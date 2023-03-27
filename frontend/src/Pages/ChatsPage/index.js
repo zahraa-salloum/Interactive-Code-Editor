@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from '../../components/NavBar/Nav';
+import  Dashboard from '../../components/Dashboard_NavBar/dashboard_nav';
 import axios from 'axios';
 import "../ChatsPage/chat.css";
 import ChatsList from "../../components/Chats/ChatsList/index"
@@ -30,8 +30,8 @@ console.log(list)
 
     return(
         <>
-        <NavBar></NavBar>
-        <div className='chat_page'>
+        <Dashboard/>
+        <div className='chat_page' id='chat_page'>
        <ChatsList list={list}></ChatsList>
         <div className='individual_chat_content'>
             <div className='chat_box'>
