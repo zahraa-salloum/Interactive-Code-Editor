@@ -15,6 +15,8 @@ class MessagesController extends Controller
 
         $user_id = Auth::id();
         $query = User::join('messages','users.id', '=','messages.sender_id')->where('sender_id',$user_id)->orWhere('receiver_id',$user_id)->get();
+        
+    
 
         if($query) {
             return response()->json([

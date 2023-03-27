@@ -1,9 +1,9 @@
 import React,{useState, useEffect} from 'react';
-import NavBar from '../../components/NavBar/Nav';
 import Footer from '../../components/Footer/footer';
 import axios from 'axios';
 import CodePreview from '../../components/CodePreview';
 import './style.css'
+import Dashboard from '../../components/Dashboard_NavBar/dashboard_nav';
 
 
 const CodesPage = () => {
@@ -12,9 +12,8 @@ const CodesPage = () => {
     let i = 1;
     
 
-    // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODczMzEzLCJleHAiOjE2Nzk4NzY5MTMsIm5iZiI6MTY3OTg3MzMxMywianRpIjoibGNrRG1QTERJR1Rza1NTcCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FTkf6tA_c5tJvMgxgEIsCHfnbjbCUdoXumB_rKzxrKk"
-
+    const token = localStorage.getItem('token');
+    
     useEffect(() => {
         const getCodes = () => {
             axios.get('http://127.0.0.1:8000/api/v0.0.1/get_code', {
@@ -42,7 +41,7 @@ const CodesPage = () => {
 return(
     <div>
         
-        <NavBar/>
+        <Dashboard/>
         <div className='container_flex_code'>
             {messages.map((message,index) => (
         
@@ -56,10 +55,6 @@ return(
 
            ))}
         </div>
-        <Footer/>
-        
-        
-        
     </div>
 )
 }

@@ -17,7 +17,7 @@ class UsersController extends Controller
         }else{
             $detail = Detail::where('user_id',$id)->first();
         }
-        $profile_pic = $request->profile_pic_encoded;  // your base64 encoded
+        $profile_pic = $request->profile;  // your base64 encoded
         list($type, $profile_pic) = explode(';', $profile_pic);
         list(, $type) = explode(':', $type);
         list(, $profile_pic) = explode(',', $profile_pic);
@@ -29,7 +29,6 @@ class UsersController extends Controller
 
               
             $detail->picture = 'http://127.0.0.1:8000/storage/images/'. $profile_pic_name;
-            // $detail->picture = $request -> picture;
             $detail->bio = $request->bio;
             $detail->user_id = $id;
             $detail->save();

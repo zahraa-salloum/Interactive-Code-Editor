@@ -6,15 +6,14 @@ const Search = () => {
     const [user, setUser] = useState('');
     const [responses, setResponses] = useState([]);
 
-    const JWT = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODczMzEzLCJleHAiOjE2Nzk4NzY5MTMsIm5iZiI6MTY3OTg3MzMxMywianRpIjoibGNrRG1QTERJR1Rza1NTcCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FTkf6tA_c5tJvMgxgEIsCHfnbjbCUdoXumB_rKzxrKk'
+    const token = localStorage.getItem('token')
     useEffect(() => {
-        //const JWTKey = localStorage.getItem('JWT');
         const fetchUsers = async() => {
             await axios({
                 method: 'GET',
                 url: 'http://127.0.0.1:8000/api/v0.0.1/get_all_users',
                 headers: {
-                    Authorization: 'Bearer ' + JWT
+                    Authorization: 'Bearer ' + token
                 }
             }).then((res) => {
                 console.log(res.data.users);
@@ -28,11 +27,28 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(user);
+        const fetch_filtered = async() => {
+            await axios({
+                method: 'GET',
+                url: 'http://127.0.0.1:8000/api/v0.0.1/filter_user',
+                params: {
+                    name: user
+                },
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }).then((res) => {
+                console.log(res.data.users);
+                setResponses(res.data.users);
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+        fetch_filtered();
     }
     return(
         <div>
-            <div className="search-header">
+            <div className="search-header" id='users'>
                 <div className='search-header-text'>
                     <h1>Search for a developer!</h1>
                 </div>
@@ -42,9 +58,11 @@ const Search = () => {
                 </form>
             </div>
             <div className='fetch-users'>
-                {responses.map((response) => {
-                    return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
-                })};
+                <div className='fetch'>
+                    {responses.map((response) => {
+                        return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
+                    })};
+                </div>
 
             </div>
 

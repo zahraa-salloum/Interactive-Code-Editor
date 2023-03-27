@@ -10,8 +10,8 @@ const AdminPage = () => {
 
     const [users, setUsers] = useState([]);
 
-    // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODczMzEzLCJleHAiOjE2Nzk4NzY5MTMsIm5iZiI6MTY3OTg3MzMxMywianRpIjoibGNrRG1QTERJR1Rza1NTcCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FTkf6tA_c5tJvMgxgEIsCHfnbjbCUdoXumB_rKzxrKk"
+    const token = localStorage.getItem('token');
+  
 
     useEffect(() => {
         const getUsers = () => {

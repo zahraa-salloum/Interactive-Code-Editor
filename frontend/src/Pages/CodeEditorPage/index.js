@@ -4,6 +4,7 @@ import Output from "../../components/Editor/Output.js";
 import NavBar from "../../components/NavBar/Nav.jsx";
 import Footer from "../../components/Footer/footer.jsx";
 import axios from "axios";
+import Dashboard from "../../components/Dashboard_NavBar/dashboard_nav.jsx";
 
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
@@ -43,8 +44,8 @@ const CodeEditorPage = () => {
       });
   };
 
-  // const token = window.localStorage.getItem('token');
-  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODcwMzkzLCJleHAiOjE2Nzk4NzM5OTMsIm5iZiI6MTY3OTg3MDM5MywianRpIjoiUE9CT1B3ZTJyU2xBak0xdyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.c0W2fdQ8Ipyk42ZHz8L7qxBNQ9c4MbpgaGH418h1AIU';
+  const token = localStorage.getItem('token');
+
 
   const saveCode = async () =>{
     const data = new FormData();
@@ -64,7 +65,7 @@ const CodeEditorPage = () => {
   return (
     <>
     <div className="code_editor_page">
-    <NavBar />
+    <Dashboard/>
     <button className = "btn compile_btn" onClick={pythonCompile}>Run</button>
     <div className="container_code_editor">
       <div className="pane top-pane">
@@ -84,8 +85,6 @@ const CodeEditorPage = () => {
     </div>
     <button className = "btn save_btn compile_btn" onClick={saveCode}>Save</button>
     </div>
-    <Footer />
-    
     </>
   );
 };
