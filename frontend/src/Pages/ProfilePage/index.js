@@ -23,10 +23,20 @@ const ProfilePage = () => {
     reader.readAsDataURL(picture);
   };
   
+const token = localStorage.getItem('token');
 
-  const handleSubmit = () =>{
-    console.log(bio);
-    console.log(profile);
+  const handleSubmit = async () =>{
+    const data = new FormData();
+    data.append('bio',bio);
+    data.append('profile',profile);
+
+     await axios.post('http://127.0.0.1:8000/api/v0.0.1/add_details',data,{
+          headers: {
+              Authorization: `Bearer ${token}`
+          }
+      }).then(response => {
+          console.log(response.data)
+      })
   }
 
   return (
