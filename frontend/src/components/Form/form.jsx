@@ -21,6 +21,8 @@ const handleEmail=(e)=>{
     data.append("password",password )
     axios.post("http://127.0.0.1:8000/api/v0.0.1/auth/login",data).then((res) => {
         console.log(res);
+        console.log(res.data.authorisation.token)
+        localStorage.setItem('token',res.data.authorisation.token);
     }).catch((err) => {
         console.error("Error response:");
         console.error(err.response.data.message);  
