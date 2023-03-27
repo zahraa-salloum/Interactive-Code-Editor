@@ -43,6 +43,24 @@ const CodeEditorPage = () => {
       });
   };
 
+  const token = localStorage.getItem('token');
+
+
+  const saveCode = async () =>{
+    const data = new FormData();
+    data.append('code',python);
+
+      axios.post('http://127.0.0.1:8000/api/v0.0.1/store_code',data,{
+          headers: {
+              Authorization: `Bearer ${token}`
+          }
+      }).then(response => {
+          console.log(response.data)
+      })
+  }
+
+  
+
   return (
     <>
     <div className="code_editor_page">
@@ -64,7 +82,7 @@ const CodeEditorPage = () => {
       </div>
       
     </div>
-    <button className = "btn compile_btn" onClick={pythonCompile}>Save</button>
+    <button className = "btn save_btn compile_btn" onClick={saveCode}>Save</button>
     </div>
     <Footer />
     

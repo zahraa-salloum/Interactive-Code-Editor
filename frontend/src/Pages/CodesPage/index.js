@@ -12,9 +12,8 @@ const CodesPage = () => {
     let i = 1;
     
 
-    // const token = window.localStorage.getItem('token');
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YwLjAuMS9hdXRoL2xvZ2luIiwiaWF0IjoxNjc5ODY0OTA0LCJleHAiOjE2Nzk4Njg1MDQsIm5iZiI6MTY3OTg2NDkwNCwianRpIjoiYUZtak1IVmQ0WnU5T0g3SSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.102BcgmeI9gTkTuMAekcSajkuC8OKBv5wmXmjKKwwMk"
-
+    const token = localStorage.getItem('token');
+    
     useEffect(() => {
         const getCodes = () => {
             axios.get('http://127.0.0.1:8000/api/v0.0.1/get_code', {
@@ -56,6 +55,7 @@ return(
 
            ))}
         </div>
+        <Footer/>
         
         
         

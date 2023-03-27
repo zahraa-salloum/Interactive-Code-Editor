@@ -6,11 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items:center ;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .small-container .top{
-    height: 40%;
+    height: 20%;
     width: 90%;
+    padding-top: 5%;
     font-size: 20px;
     font-weight: 600;
 }
@@ -19,6 +20,12 @@
     align-items: end;
     height: 40%;
     width: 90%;
+}
+.top p{
+    font-size: 1.2vw;
+}
+.bottom h1{
+    font-size: 2vw;
 }
 
 @media screen and (max-width: 480px) {
