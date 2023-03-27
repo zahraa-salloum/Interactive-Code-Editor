@@ -27,7 +27,7 @@ Route::group(['prefix' => 'v0.0.1'], function(){
         Route::post('/search_messages',[MessagesController::class,"searchMessages"]);
       });
 
-      Route::post('register',[AuthController::class,'register']);
+Route::post('register',[AuthController::class,'register']);
       });
 
 
