@@ -8,6 +8,9 @@ import NavBar from "../../components/NavBar/Nav.jsx";
 const ProfilePage = () => {
   const [bio, setBio] = useState("");
   const [profile, setProfile] = useState("");
+  const [first_name, setName] = useState("");
+  const [biography, setBiography] = useState("");
+  const [image, setImage] = useState("");
 
   const handleBioChange= (e) =>{
     setBio(e.target.value)
@@ -39,6 +42,26 @@ const token = localStorage.getItem('token');
           console.log(response.data)
       })
   }
+
+  useEffect(() => {
+    const fetchUserData = async() => {
+        await axios({
+            method: 'Get',
+            url: 'http://127.0.0.1:8000/api/v0.0.1/get_user',
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+        }).then((res) => {
+            console.log(res.data);
+            console.log(res.data.user);
+
+            // setResponses(res.data.users);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+    fetchUserData();
+},[]);
 
   return (
     <div id="profile">
