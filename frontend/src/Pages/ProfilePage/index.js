@@ -11,6 +11,7 @@ const ProfilePage = () => {
   const [first_name, setName] = useState("");
   const [biography, setBiography] = useState("");
   const [image, setImage] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleBioChange= (e) =>{
     setBio(e.target.value)
@@ -40,7 +41,13 @@ const token = localStorage.getItem('token');
           }
       }).then(response => {
           console.log(response.data)
+          setMessage("Your profile has been updated");
+          setTimeout(() => {
+            window.location.reload()
+          }, 500);
+          
       })
+      
   }
 
   useEffect(() => {
@@ -53,7 +60,10 @@ const token = localStorage.getItem('token');
             }
         }).then((res) => {
             console.log(res.data);
-            console.log(res.data.user);
+            console.log(res.data[0].picture);
+            setImage(res.data[0].picture);
+            setBiography(res.data[0].bio);
+            setName(res.data.user.first_name);
 
             // setResponses(res.data.users);
         }).catch((err) => {
@@ -69,7 +79,12 @@ const token = localStorage.getItem('token');
       <ProfileInput 
       onChange={handleBioChange}
       onSubmit={handleSubmit}
-      onUpload={handlePictureChange} />
+      onUpload={handlePictureChange}
+      image={image}
+      bio={biography}
+      first_name = {first_name}
+      message={message}
+       />
       <Footer />
     </div>
   )
