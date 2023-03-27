@@ -14,10 +14,13 @@ const ChatsList = ({ list, clicked }) => {
 
     const [selectedChat, setChat] = useState([])
     const [specific_chat, setSpecific] = useState([])
+    const [name, setName] = useState()
     
 
     const handleUserClick = (chat) => {
         setChat(chat)
+        setName(`${chat.first_name} ${chat.last_name}`)
+
     }
 
 
