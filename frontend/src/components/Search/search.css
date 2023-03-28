@@ -66,6 +66,7 @@ button{
     font-size: 2vw;
     color: var(--charcoal);
     margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 .user-profile-img{
@@ -105,4 +106,8 @@ textarea.message_area {
     align-items: center;
     gap: 10px;
     flex-direction: column;
+}
+
+button.btn.send_single_message {
+    background-color: var(--coral);
 }
