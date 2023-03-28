@@ -17,7 +17,7 @@
 }
 .test{
     font-family: 'Urbanist';
-    color:white;
+    color:var(--white);
 }
 .test:hover{
     cursor: pointer;
