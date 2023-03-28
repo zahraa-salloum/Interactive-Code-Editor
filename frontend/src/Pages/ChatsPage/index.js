@@ -3,7 +3,7 @@ import Dashboard from '../../components/Dashboard_NavBar/dashboard_nav';
 import axios from 'axios';
 import "../ChatsPage/chat.css";
 import ChatsList from "../../components/Chats/ChatsList/index"
-import NavBar from '../../components/NavBar/Nav';
+import Footer from '../../components/Footer/footer';
 
 
 
@@ -36,8 +36,6 @@ const ChatsPage = () => {
             <div className='chat_page' id='chat_page'>
                 <ChatsList list={list}></ChatsList>
             </div>
-            <Send></Send>
-            <NavBar></NavBar>
         </>
     )
 }
