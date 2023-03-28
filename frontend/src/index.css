@@ -26,6 +26,7 @@ body{
   background-color: var(--charcoal) !important;
   border-bottom-left-radius: 10px ;
   border-bottom-right-radius: 10px ;
+  min-height: 500px;
 }
 .top_pane{
   background-color: var(--serenity);
@@ -174,4 +175,18 @@ p.profile_bio {
   margin-top: 1%;
   font-size: 2em;
   transition: 0.5s;
+}
+
+
+@media (max-width:768px){
+  .container_code_editor {
+    width: 80%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
 }

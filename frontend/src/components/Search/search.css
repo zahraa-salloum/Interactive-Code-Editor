@@ -35,23 +35,25 @@ button{
     font-size: 20px;
     cursor: pointer;
 }
-.fetch-users{ 
+/* .fetch-users{ 
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.fetch{
+} */
+.fetch {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
 }
 .user_card{
     background-color: var(--serenity);
     width: 20%;
-    height: 25rem;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -68,8 +70,8 @@ button{
 
 .user-profile-img{
     border: 1px solid var(--black);
-    width: 60%;
-    height: 50%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-top: 0;
 }
@@ -88,4 +90,19 @@ button{
 .clear-btn:hover{
     background-color: var(--serenity);
     color: var(--charcoal);
+}
+
+textarea.message_area {
+    width: 100%;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.single_message_box {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
 }

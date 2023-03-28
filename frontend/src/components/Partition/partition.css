@@ -1,6 +1,9 @@
 .part{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
 }
 h1{
     color: var(--white);
@@ -9,13 +12,14 @@ label{
     margin-top: 2%;
     color: var(--white);
 }
-input{
+.part input{
     margin-top: 2%;
     padding: 10px;
     border: 1px solid  var(--coral);
     border-radius: 10px;
     background-color: var(--charcoal);
     color: var(--white);
+    width: 100%;
     
 }
 input[type='password'] {

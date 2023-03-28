@@ -3,6 +3,7 @@ import  './loginform.css';
 import RegisterButton from "../RegisterButton/registerbutton";
 import {useState } from "react";
 import axios from "axios"
+import Footer from "../Footer/footer";
 import { Navigate } from "react-router-dom";
 
 const LoginForm = () => {
@@ -45,6 +46,7 @@ const handleEmail=(e)=>{
   }
 
     return(
+      <>
         <div className="form_container">
         <h1>Sign In</h1>
         <Partition Lname={"Email"} Itype={"email"} onChange={handleEmail} size="40" />
@@ -52,6 +54,8 @@ const handleEmail=(e)=>{
         <RegisterButton name={"Login"} onSubmit={handleSubmit}/>
         <p className="error"><br/>{error}</p>
         </div>
+        <Footer/>
+        </> 
     );}
 
 export default LoginForm;

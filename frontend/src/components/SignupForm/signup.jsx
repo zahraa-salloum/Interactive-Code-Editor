@@ -5,6 +5,7 @@ import RegisterButton from "../RegisterButton/registerbutton";
 import {useState} from "react";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer/footer";
 const SignUp= ()=>{
 const [first,setFirst]=useState("")
 const [last,setLast]=useState("")
@@ -74,6 +75,7 @@ return(
          <p className="error">{error}</p>
          <p className="test" onClick={signinNavigation}>already have an account?</p>
  </div>
+     <Footer/>
  </>
 )
 }
