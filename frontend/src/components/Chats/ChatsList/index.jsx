@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import Chat from "../Chat/index"
+
 
 const ChatsList = ({ list, clicked }) => {
     const existing_user = []
@@ -15,7 +17,7 @@ const ChatsList = ({ list, clicked }) => {
     const [selectedChat, setChat] = useState([])
     const [specific_chat, setSpecific] = useState([])
     const [name, setName] = useState()
-    
+
 
     const handleUserClick = (chat) => {
         setChat(chat)
@@ -47,7 +49,8 @@ const ChatsList = ({ list, clicked }) => {
                     message_content: item.message_content,
                     sender_id: item.sender_id,
                     receiver_id: item.receiver_id,
-                    created_at: item.created_at
+                    created_at: item.created_at,
+                    email:item.email
                 }
             });
             setSpecific(specificChat);
@@ -62,6 +65,7 @@ const ChatsList = ({ list, clicked }) => {
 
 
     return (
+        <>
         <div className='chat_list_content'>
             <div className='chat_list_header'>Messages</div>
             <div className='chat-search'><input placeholder='Search...'></input></div>
@@ -74,6 +78,14 @@ const ChatsList = ({ list, clicked }) => {
                 ))}
             </div>
         </div>
+          <div className='individual_chat_content'>
+          <div className='chat_box'>
+              {specific_chat && name && (
+                  <Chat chat_name={name} specific_chat={specific_chat} />
+              )}
+          </div>
+      </div>
+      </>
 
     )
 }

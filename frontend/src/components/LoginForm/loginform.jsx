@@ -35,9 +35,6 @@ const handleEmail=(e)=>{
     axios.post("http://127.0.0.1:8000/api/v0.0.1/auth/login",data).then((res) => {
         console.log(res)
         localStorage.setItem('token',res.data.authorisation.token);
-        localStorage.setItem('first_name',res.data.user.first_name);
-        localStorage.setItem('last_name',res.data.user.last_name);
-        localStorage.setItem('email',res.data.user.email);
         window.location.href="http://localhost:3000/code_editor"  
 }
     ).catch((err) => {
