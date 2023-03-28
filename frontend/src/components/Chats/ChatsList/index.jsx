@@ -8,7 +8,7 @@ const ChatsList = ({ list, clicked }) => {
     const existing_user = []
     list.forEach((data) => {
         const existing = existing_user.find((user) => user.email === data.email);
-        if (!existing && data.email == user_email) {
+        if (!existing && data.email !== user_email) {
             existing_user.push(data);
         }
     })
