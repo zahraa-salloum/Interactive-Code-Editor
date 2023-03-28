@@ -35,12 +35,9 @@ button{
     font-size: 20px;
     cursor: pointer;
 }
-/* .fetch-users{ 
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+.fetch-users {
+    margin-bottom: 5%;
+}
 .fetch {
     width: 90%;
     display: flex;
@@ -110,4 +107,14 @@ textarea.message_area {
 
 button.btn.send_single_message {
     background-color: var(--coral);
+}
+
+input.search_input {
+    margin-top: 2%;
+    padding: 10px;
+    border: 1px solid var(--coral);
+    border-radius: 10px;
+    background-color: var(--charcoal);
+    color: var(--white);
+    width: 100%;
 }

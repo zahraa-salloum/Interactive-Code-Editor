@@ -34,7 +34,7 @@ return(
    
         <div className='specific_name'>{chat_name}</div>
         <div className='chat_box'>
-            <div class="message_container">
+            <div className="message_container">
         {sortedChat.map((chat, index) => (
           <React.Fragment key={index}>
             {chat.email === user_email ? (

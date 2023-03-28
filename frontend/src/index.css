@@ -177,6 +177,14 @@ p.profile_bio {
   transition: 0.5s;
 }
 
+input[type="file"] {
+  margin-top: 2%;
+  padding: 10px;
+  border: 1px solid var(--coral);
+  border-radius: 10px;
+  background-color: var(--charcoal);
+  color: var(--white);
+}
 
 @media (max-width:768px){
   .container_code_editor {
@@ -188,5 +196,17 @@ p.profile_bio {
     justify-content: space-between;
     flex-direction: column;
     gap: 10px;
+}
+.profile_container{
+  width: 100%;
+}
+.search-header {
+  flex-direction: column;
+}
+form.filter_section {
+  width: 100%;
+}
+input.search_input {
+  width: 100%;
 }
 }
