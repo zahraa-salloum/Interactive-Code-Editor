@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 const Header = () => {
     const navigator = useNavigate();
     const registerNavigation = () => {
-        navigator('/sign_up');
+        navigator('/register');
     }
     return (
         <div className="main-header-home" id='header'>
