@@ -197,4 +197,16 @@ input[type="file"] {
     flex-direction: column;
     gap: 10px;
 }
+.profile_container{
+  width: 100%;
+}
+.search-header {
+  flex-direction: column;
+}
+form.filter_section {
+  width: 100%;
+}
+input.search_input {
+  width: 100%;
+}
 }
