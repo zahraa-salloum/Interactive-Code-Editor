@@ -36,7 +36,6 @@ const ChatsPage = () => {
             <div className='chat_page' id='chat_page'>
                 <ChatsList list={list}></ChatsList>
             </div>
-            <Footer/>
         </>
     )
 }
