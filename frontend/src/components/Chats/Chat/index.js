@@ -5,6 +5,8 @@ import axios from 'axios';
 
 const Chat =({chat_name,specific_chat})=>{
 
+
+   const [message, setMessage] = useState("");
     const user_email = localStorage.getItem('email')
     const token = localStorage.getItem('token');
 
@@ -18,20 +20,29 @@ const Chat =({chat_name,specific_chat})=>{
    return formatted_date
       }
 
-       const handleOnClick = (message_content)=> {
-        // data=new FormData();
-        // const receiver_id = .email === user_email ? null: specific_chat
-        // data.append('receiver')
-        axios.post('http://127.0.0.1:8000/api/v0.0.1/send_message', {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            }).then(response => {
+      const handleInputChange = (e) => {
+        setMessage(e.target.value)
+        console.log(message)
+      }
 
-            })
-       }
+    //    const handleSubmit = ()=> {
+    //     const data=new FormData();
+    //     const receiver_id = specific_chat.email === user_email ? null: specific_chat.receiver_id
+    //     data.append('receiver_id',receiver_id)
+    //     data.append('message_content',message)
+    //     console.log(data)
+    //     axios.post('http://127.0.0.1:8000/api/v0.0.1/send_message', data, {
+    //             headers: {
+    //                 Authorization: `Bearer ${token}`
+    //             }
+    //         }).then(response => {
 
-return(
+    //         }).catch(error => {
+    //             console.log(error)
+    //           });
+    //    }
+
+ return(
     <>
    
         <div className='specific_name'>{chat_name}</div>
@@ -58,7 +69,7 @@ return(
           </React.Fragment>
         ))}
         </div>
-        <Send handleOnClick={handleOnClick}></Send>
+        <Send onSubmit={handleSubmit} oncChange={handleInputChange}></Send>
         </div>
         
     
