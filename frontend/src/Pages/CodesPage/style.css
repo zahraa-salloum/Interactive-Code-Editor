@@ -7,3 +7,9 @@
     flex-wrap: wrap;
     padding-bottom: 50px;
 }
+.footer-section{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}

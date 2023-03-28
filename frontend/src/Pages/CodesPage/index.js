@@ -54,8 +54,9 @@ return(
                 </React.Fragment>
 
            ))}
+            <div className='footer-section'><Footer/></div>
         </div>
-        <Footer/>
+        
     </div>
 )
 }
