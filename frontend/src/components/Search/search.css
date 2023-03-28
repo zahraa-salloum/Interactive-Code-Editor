@@ -35,18 +35,20 @@ button{
     font-size: 20px;
     cursor: pointer;
 }
-.fetch-users{ 
+/* .fetch-users{ 
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.fetch{
+} */
+.fetch {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
 }
 .user_card{
     background-color: var(--serenity);
@@ -88,4 +90,10 @@ button{
 .clear-btn:hover{
     background-color: var(--serenity);
     color: var(--charcoal);
+}
+
+textarea.message_area {
+    width: 100%;
+    border-radius: 10px;
+    padding: 2%;
 }
