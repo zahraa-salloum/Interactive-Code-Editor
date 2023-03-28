@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/footer';
 
 
 
+
 const ChatsPage = () => {
 
     const [list, setList] = useState([]);
@@ -35,7 +36,10 @@ const ChatsPage = () => {
             <Dashboard />
             <div className='chat_page' id='chat_page'>
                 <ChatsList list={list}></ChatsList>
+                
             </div>
+            
+            <Footer></Footer>
         </>
     )
 }

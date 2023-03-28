@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "../Chat/index.css"
+import Send from "../Send/index"
 
 const Chat =({chat_name,specific_chat})=>{
 
     const user_email = localStorage.getItem('email')
-    
-    // useEffect(()=>{
-    //     console.log(user_email)
-    // },[])
+    const token = localStorage.getItem('token');
 
     const sortedChat = specific_chat.sort((a, b) => {
         return new Date(a.created_at) - new Date(b.created_at);
@@ -18,6 +16,18 @@ const Chat =({chat_name,specific_chat})=>{
    const formatted_date = dbDate.toLocaleString(); 
    return formatted_date
       }
+
+      useEffect(()=>{
+       const handleOnClick = ()=> {
+        axios.post('http://127.0.0.1:8000/api/v0.0.1/send_message', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }).then(response => {
+
+            })
+       }
+    })
 
 return(
     <>
@@ -46,7 +56,9 @@ return(
           </React.Fragment>
         ))}
         </div>
+        <Send></Send>
         </div>
+        
     
     </>
 )

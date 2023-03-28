@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Chat from "../Chat/index"
 
 
+
 const ChatsList = ({ list, clicked }) => {
     const existing_user = []
     list.forEach((data) => {
@@ -72,7 +73,6 @@ const ChatsList = ({ list, clicked }) => {
             <div className="chat_list">
                 {existing_user.map((chat, index) => (
                     <React.Fragment key={index}>
-                        {/* <div className="chat_list_image" key={`image-${index}`}></div> */}
                         <div className="chat_name" key={`name-${index}`} onClick={() => handleUserClick(chat)}>{chat.first_name} {chat.last_name}</div>
                     </React.Fragment>
                 ))}
@@ -85,6 +85,7 @@ const ChatsList = ({ list, clicked }) => {
               )}
     
       </div>
+    
       </>
 
     )

@@ -64,6 +64,11 @@ background-color: var(--serenity);
     border-radius: 8px;
     color: var(--white);
   }
+
+  .send-container{
+    display:flex;
+    align-items: center;
+  }
   
   
  
