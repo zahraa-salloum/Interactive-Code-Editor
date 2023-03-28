@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../Chat/index.css"
-import Send from "../Send/index"
+import Send from "../Send/index";
+import axios from 'axios';
 
 const Chat =({chat_name,specific_chat})=>{
 
