@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/footer.jsx";
 import axios from "axios";
 import Dashboard from "../../components/Dashboard_NavBar/dashboard_nav.jsx";
 
+
 const CodeEditorPage = () => {
   const [python, setPython] = useState("");
   const [code_output, setOutput] = useState("Waiting for your code ...");
@@ -92,6 +93,7 @@ const CodeEditorPage = () => {
     <button className = "btn save_btn compile_btn" onClick={saveCode}>Save</button>
     <div className = "message">{message}</div>
     </div>
+    <Footer/>
     </>
   );
 };
