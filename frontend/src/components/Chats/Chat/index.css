@@ -22,7 +22,7 @@ background-color: var(--serenity);
     margin-top:3%;
     margin-bottom:10%;
     font-size:1.70rem;
-    padding-left: 20%;
+    /* padding-left: 20%; */
     color: var(--white);
     text-transform: capitalize;
   }
@@ -45,25 +45,26 @@ background-color: var(--serenity);
   
   .message_sent {
    margin-bottom:10% !important;
-    font-weight: bold;
     font-size: 1.25rem;
     margin: 0 8px;
     background-color: var(--charcoal);
     padding: 8px;
     border-radius: 8px;
+    color: var(--white);
     
   }
   
   
   .message_received  {
     margin-bottom:10% !important;
-    font-weight: bold;
     font-size: 1.25rem;
     margin: 0 8px;
     background-color: var(--coral);
     padding: 8px;
     border-radius: 8px;
+    color: var(--white);
   }
+  
   
  
   
