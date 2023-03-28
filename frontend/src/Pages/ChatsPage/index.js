@@ -29,7 +29,7 @@ const ChatsPage = () => {
         getChats()
     }, [])
 
-    console.log(list)
+   
 
     return (
         <>

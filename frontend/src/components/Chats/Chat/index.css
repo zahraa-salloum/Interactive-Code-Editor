@@ -20,6 +20,10 @@ border-radius: 10px;
     width:80%
   }
 
+  .chat_page{
+    height:120vh
+  }
+
   .specific_name{
     margin-top:3%;
     margin-bottom:3%;
