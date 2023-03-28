@@ -18,8 +18,10 @@ const Chat =({chat_name,specific_chat})=>{
    return formatted_date
       }
 
-      useEffect(()=>{
-       const handleOnClick = ()=> {
+       const handleOnClick = (message_content)=> {
+        // data=new FormData();
+        // const receiver_id = .email === user_email ? null: specific_chat
+        // data.append('receiver')
         axios.post('http://127.0.0.1:8000/api/v0.0.1/send_message', {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -28,7 +30,6 @@ const Chat =({chat_name,specific_chat})=>{
 
             })
        }
-    })
 
 return(
     <>
@@ -57,7 +58,7 @@ return(
           </React.Fragment>
         ))}
         </div>
-        <Send></Send>
+        <Send handleOnClick={handleOnClick}></Send>
         </div>
         
     
