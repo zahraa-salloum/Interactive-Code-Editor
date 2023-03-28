@@ -2,16 +2,18 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import Chat from "../Chat/index"
 
-
+const user_email = localStorage.getItem('email')
 
 const ChatsList = ({ list, clicked }) => {
     const existing_user = []
     list.forEach((data) => {
         const existing = existing_user.find((user) => user.email === data.email);
-        if (!existing) {
+        if (!existing && data.email != user_email) {
             existing_user.push(data);
         }
     })
+
+    console.log(list)
 
 
 
@@ -73,19 +75,19 @@ const ChatsList = ({ list, clicked }) => {
             <div className="chat_list">
                 {existing_user.map((chat, index) => (
                     <React.Fragment key={index}>
+                        {/* <div className="chat_list_image" key={`image-${index}`}></div> */}
                         <div className="chat_name" key={`name-${index}`} onClick={() => handleUserClick(chat)}>{chat.first_name} {chat.last_name}</div>
                     </React.Fragment>
                 ))}
             </div>
         </div>
           <div className='individual_chat_content'>
-          
+          <div className='chat_box'>
               {specific_chat && name && (
                   <Chat chat_name={name} specific_chat={specific_chat} />
               )}
-    
+          </div>
       </div>
-    
       </>
 
     )
