@@ -68,7 +68,7 @@ const Search = () => {
             <div className='fetch-users'>
                 <div className='fetch'>
                     {responses.map((response) => {
-                        return <UserCard key={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
+                        return <UserCard key={response.id} user_id ={response.id} firstName={response.first_name} lastName={response.last_name} bio={response.bio} image={response.picture}/>
                     })};
                 </div>
 
