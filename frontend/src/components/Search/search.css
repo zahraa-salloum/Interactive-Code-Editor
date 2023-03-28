@@ -53,7 +53,7 @@ button{
 .user_card{
     background-color: var(--serenity);
     width: 20%;
-    height: 25rem;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -70,8 +70,8 @@ button{
 
 .user-profile-img{
     border: 1px solid var(--black);
-    width: 60%;
-    height: 50%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-top: 0;
 }
@@ -96,4 +96,13 @@ textarea.message_area {
     width: 100%;
     border-radius: 10px;
     padding: 2%;
+}
+
+.single_message_box {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
 }
