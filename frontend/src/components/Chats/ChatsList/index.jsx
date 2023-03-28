@@ -82,7 +82,7 @@ const ChatsList = ({ list, clicked }) => {
             </div>
         </div>
           <div className='individual_chat_content'>
-          <div className='chat_box'>
+          <div className='chat_box_container'>
               {specific_chat && name && (
                   <Chat chat_name={name} specific_chat={specific_chat} />
               )}
