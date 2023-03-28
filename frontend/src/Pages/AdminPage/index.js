@@ -21,7 +21,6 @@ const AdminPage = () => {
                 }
             }).then(response => {
                 setUsers(response.data.users)
-                console.log(response.data.users)
             })
         }
         getUsers()

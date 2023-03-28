@@ -71,7 +71,6 @@ const ChatsList = ({ list, clicked }) => {
         <>
         <div className='chat_list_content'>
             <div className='chat_list_header'>Messages</div>
-            <div className='chat-search'><input className ="chat_list_search" placeholder='Search...'></input></div>
             <div className="chat_list">
                 {existing_user.map((chat, index) => (
                     <React.Fragment key={index}>

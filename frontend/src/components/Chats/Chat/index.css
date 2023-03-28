@@ -1,84 +1,86 @@
 @import "index.css";
 
-.individual_chat_content{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin:5%;
-    width:80%;
-    margin-top:0%;
+.individual_chat_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 5%;
+  width: 80%;
+  margin-top: 0%;
 }
-.chat_box{
-background-color: var(--serenity);
-border-radius: 10px;
+
+.chat_box {
+  background-color: var(--serenity);
+  border-radius: 10px;
 }
+
 .chat_content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin:5%;
-    width:80%
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 5%;
+  width: 80%
+}
 
-  .chat_page{
-    height:120vh
-  }
+.chat_page {
+  height: 120vh
+}
 
-  .specific_name{
-    margin-top:3%;
-    margin-bottom:3%;
-    font-size:1.70rem;
-    color: var(--white);
-    text-transform: capitalize;
-  }
+.specific_name {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 1.70rem;
+  color: var(--white);
+  text-transform: capitalize;
+}
 
-  .sent{
-    display:flex;
-    justify-content: flex-end;
-  }
+.sent {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .received{
-    display:flex;
-    justify-content: flex-start;
-  }
-  
-   .message_container {
+.received {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message_container {
   padding: 2%;
-   height: 500px;
-   overflow-y: scroll;
-  } 
-  
-  .message_sent {
-   margin-bottom:10% !important;
-    font-size: 1.25rem;
-    margin: 0 8px;
-    background-color: var(--charcoal);
-    padding: 8px;
-    border-radius: 8px;
-    color: var(--white);
-    
-  }
-  
-  
-  .message_received  {
-    margin-bottom:10% !important;
-    font-size: 1.25rem;
-    margin: 0 8px;
-    background-color: var(--coral);
-    padding: 8px;
-    border-radius: 8px;
-    color: var(--white);
-  }
+  height: 500px;
+  overflow-y: scroll;
+}
 
-  .send-container{
-    display:flex;
-    align-items: center;
-  }
-  
-  form.send_container_box {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.message_sent {
+  margin-bottom: 2% !important;
+  font-size: 1.25rem;
+  margin: 0 8px;
+  background-color: var(--charcoal);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--white);
+
+}
+
+
+.message_received {
+  margin-bottom: 2% !important;
+  font-size: 1.25rem;
+  margin: 0 8px;
+  background-color: var(--coral);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--white);
+}
+
+.send-container {
+  display: flex;
+  align-items: center;
+}
+
+form.send_container_box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 button.btn.submit_btn {
@@ -107,8 +109,8 @@ input.message_to_send {
   padding: 2%;
   font-size: 1.2em;
 }
- 
-  
+
+
 input.chat_list_search {
   margin-top: 2%;
   padding: 10px;
@@ -117,4 +119,10 @@ input.chat_list_search {
   background-color: var(--charcoal);
   color: var(--white);
   width: 100%;
+}
+
+
+.send_container {
+  display: flex;
+  align-items: center;
 }

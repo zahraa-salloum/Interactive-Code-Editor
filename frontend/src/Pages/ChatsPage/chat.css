@@ -1,44 +1,46 @@
 @import '../../index.css';
 
-.chat_page{
-    padding:0% 2%;
-    display:flex;
+.chat_page {
+    padding: 0% 2%;
+    display: flex;
 }
 
-.chat_list_content{
-    display:flex;
+.chat_list_content {
+    display: flex;
     flex-direction: column;
     border-right: 1px solid var(--white);
     padding-right: 2%;
+    width: 15%;
 }
 
-.chat_list_header{
+.chat_list_header {
     margin-top: 20px;
     margin-bottom: 20px;
-    color:var(--white)
+    color: var(--white)
 }
 
-.chat_list{
+.chat_list {
     margin-top: 10%;
-    /* background-color: var(--serenity); */
 }
 
-.chat_list:first-child{
+.chat_list:first-child {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
-.chat_name{
-        padding: 2%;
-        border: 1px solid var(--coral);
-        cursor: pointer;
-        text-transform: capitalize;
+
+.chat_name {
+    font-size: 1.3em;
+    padding: 2%;
+    border: 1px solid var(--coral);
+    cursor: pointer;
+    text-transform: capitalize;
+    text-align:center;
 }
 
 
 
-.time{
+.time {
     font-size: 0.6rem;
     font-style: italic;
     /* text-align: end; */
 }
-
