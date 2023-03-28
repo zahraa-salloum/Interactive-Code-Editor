@@ -14,13 +14,13 @@ const Send =({handleOnClick}) => {
     return(
         <>
         <div className="send_container">
-        <form onSubmit={handleSubmit}>
-                <input
+        <form className="send_container_box" onSubmit={handleSubmit}>
+                <input className="message_to_send"
                     placeholder="Type your message"
                     value={messageContent}
                     onChange={(event) => setMessageContent(event.target.value)}
                 />
-                <button type="submit"></button>
+                <button className="btn submit_btn" type="submit">Send</button>
             </form>
         </div>
         </>
