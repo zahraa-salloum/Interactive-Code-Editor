@@ -4,46 +4,43 @@ import RegisterButton from "../RegisterButton/registerbutton";
 import {useState } from "react";
 import axios from "axios"
 import Footer from "../Footer/footer";
-import { Navigate } from "react-router-dom";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const[error,setError]=useState("");
-
-const handleEmail=(e)=>{
-      setEmail(e.target.value)
-  }
- const handlePassword=(e)=>{
-     setPassword(e.target.value)
-  }
-  const validateEmail=(email) =>{
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   const[error,setError]=useState("");
+  
+   const handleEmail=(e)=>{
+    setEmail(e.target.value)
+   }
+  const handlePassword=(e)=>{
+    setPassword(e.target.value)
+   }
+   const validateEmail=(email) =>{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);}
-
-  const validatePassword=(password)=> {
-        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-        return passwordRegex.test(password);
-      }
+    return emailRegex.test(email);
+   }
+   const validatePassword=(password)=> {
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return passwordRegex.test(password);}
       
   
   const handleSubmit=()=>{
     if (validateEmail(email)){
         if(validatePassword(password)){
-    const data = new FormData()
-    data.append("email",email)
-    data.append("password",password )
-    axios.post("http://127.0.0.1:8000/api/v0.0.1/auth/login",data).then((res) => {
-        console.log(res)
+        const data = new FormData()
+        data.append("email",email)
+        data.append("password",password )
+        axios.post("http://127.0.0.1:8000/api/v0.0.1/auth/login",data)
+        .then((res) => {
         localStorage.setItem('token',res.data.authorisation.token);
         localStorage.setItem('email',res.data.user.email);
         window.location.href="http://localhost:3000/code_editor"  
-}
-    ).catch((err) => {
+        }).catch((err) => {
         console.log(err);
-    })
-}else(setError("Invalid credentials"))
-}else(setError("Invalid credentials"))
+        })
+       }else(setError("Invalid credentials"))
+     }else(setError("Invalid credentials"))
   }
 
     return(
@@ -56,7 +53,8 @@ const handleEmail=(e)=>{
         <p className="error"><br/>{error}</p>
         </div>
         <Footer/>
-        </> 
-    );}
+      </> 
+    );
+  }
 
 export default LoginForm;
