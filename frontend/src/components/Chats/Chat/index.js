@@ -10,7 +10,6 @@ const Chat = ({ chat_name, specific_chat }) => {
     const user_email = localStorage.getItem('email')
     const token = localStorage.getItem('token');
 
-    const [soretdArray, setArray] = useState('')
 
     const sortedChat = specific_chat.sort((a, b) => {
         return new Date(a.created_at) - new Date(b.created_at);
@@ -33,8 +32,12 @@ const Chat = ({ chat_name, specific_chat }) => {
 
     const handleSubmit = () => {
         const data = new FormData();
-        const receiver_id = specific_chat[0].receiver_id
-        data.append('receiver_id', receiver_id)
+        const receiver_id = ()=>{if(specific_chat[0].email=== user_email){
+            return specific_chat[0].receiver_id
+        }
+        return specific_chat[0].sender_id
+    }
+        data.append('receiver_id', receiver_id())
         data.append('message_content', message)
 
         axios.post('http://127.0.0.1:8000/api/v0.0.1/send_message', data, {

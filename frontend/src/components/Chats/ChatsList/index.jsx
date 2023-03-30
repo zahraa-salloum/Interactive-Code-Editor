@@ -60,12 +60,6 @@ const ChatsList = ({ list, clicked }) => {
     }, [selectedChat, list])
 
 
-    const [showDiv, setShowDiv] = useState(false);
-
-    useEffect(() => {
-      setShowDiv(true);
-    }, []);
-
 
     return (
         <>
@@ -74,8 +68,7 @@ const ChatsList = ({ list, clicked }) => {
             <div className="chat_list">
                 {existing_user.map((chat, index) => (
                     <React.Fragment key={index}>
-                        {/* <div className="chat_list_image" key={`image-${index}`}></div> */}
-                       {showDiv&&<div className="chat_name" key={`name-${index}`} onClick={() => handleUserClick(chat)}>{chat.first_name} {chat.last_name}</div>}
+                       <div className="chat_name" key={`name-${index}`} onClick={() => handleUserClick(chat)}>{chat.first_name} {chat.last_name}</div>
                     </React.Fragment>
                 ))}
             </div>
